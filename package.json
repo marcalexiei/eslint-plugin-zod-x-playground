@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "lint": "eslint .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --test src/index.spec.ts"
   },
   "keywords": [],
   "author": "",
@@ -15,7 +15,7 @@
     "@eslint/js": "9.35.0",
     "@types/node": "24.3.1",
     "eslint": "9.35.0",
-    "eslint-plugin-zod-x": "0.0.1",
+    "eslint-plugin-zod-x": "1.0.1",
     "typescript": "5.9.2",
     "typescript-eslint": "8.43.0"
   },
