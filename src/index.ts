@@ -1,15 +1,36 @@
-import { z } from 'zod';
+import z from 'zod';
 
-const prova = z.string().array();
+// ================
 
-console.info(prova);
+const provaSchema = z.string().array();
+
+console.info(provaSchema);
+
+// ================
 
 z.refine(() => {
   throw Error('ciao');
 });
 
+// ================
+
 z.any();
 
-z.string().describe('desc').trim();
+// ================
 
-z.string().min(5).meta({ foo: 'bar' }).max(10);
+z.string().trim().describe('desc');
+
+z.string().meta({ foo: 'bar' }).min(5).max(10);
+
+// ================
+
+z.custom<number>();
+
+z.custom<number>((v) => typeof v === 'number', 'asd');
+
+// ================
+
+const test = z.string();
+test.safeParse('ciao');
+
+// ================

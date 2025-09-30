@@ -10,8 +10,7 @@ await describe('ESLint', () => {
   it('should lint files in ./fixtures/generic without errors', async () => {
     const result = await eslint.lintFiles(['./src/index.ts']);
 
-    assert.equal(result[0]?.errorCount, 6);
-    assert.deepEqual(
+    assert.deepStrictEqual(
       result[0]?.messages.map((m) => m.ruleId),
       [
         'zod-x/prefer-namespace-import',
@@ -20,7 +19,10 @@ await describe('ESLint', () => {
         'zod-x/no-any',
         'zod-x/prefer-meta',
         'zod-x/prefer-meta-last',
+        'zod-x/no-empty-custom-schema',
+        'zod-x/require-schema-suffix',
       ],
+      'should include all expected linting errors',
     );
   });
 });
