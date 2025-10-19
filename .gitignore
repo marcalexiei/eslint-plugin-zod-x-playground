@@ -123,7 +123,8 @@ dist
 .tern-port
 
 #VSCode code
-.vscode
+# need to version file to disable eslint extension autofix
+#.vscode
 
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
