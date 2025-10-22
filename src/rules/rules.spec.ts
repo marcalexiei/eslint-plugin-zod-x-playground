@@ -49,6 +49,31 @@ suite('each file inside rules must have an error related to that rule', () => {
     );
   });
 
+  it('no-number-schema-with-int', async () => {
+    const result = await eslint.lintFiles([
+      path.join(rulesFolderPath, 'no-number-schema-with-int.ts'),
+    ]);
+
+    assert.deepStrictEqual(
+      result[0]?.messages.map((m) => ({ ruleId: m.ruleId, line: m.line })),
+      [
+        {
+          line: 3,
+          ruleId: 'zod-x/no-number-schema-with-int',
+        },
+        {
+          line: 4,
+          ruleId: 'zod-x/no-number-schema-with-int',
+        },
+        {
+          line: 5,
+          ruleId: 'zod-x/no-number-schema-with-int',
+        },
+      ],
+      'should include no-number-schema-with-int linting error',
+    );
+  });
+
   it('no-optional-and-default-together', async () => {
     const result = await eslint.lintFiles([
       path.join(rulesFolderPath, 'no-optional-and-default-together.ts'),
