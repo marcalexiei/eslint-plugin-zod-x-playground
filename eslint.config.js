@@ -7,7 +7,13 @@ import eslintPluginZodX from 'eslint-plugin-zod-x';
 export default defineConfig(
   eslint.configs.recommended,
   tseslint.configs.recommended,
-  eslintPluginZodX.configs.recommended,
+  {
+    ...eslintPluginZodX.configs.recommended,
+    rules: {
+      ...eslintPluginZodX.configs.recommended.rules,
+      'zod-x/schema-error-property-style': ['error'],
+    },
+  },
   {
     languageOptions: {
       parserOptions: {

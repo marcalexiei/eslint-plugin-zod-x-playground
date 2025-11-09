@@ -1,12 +1,19 @@
-import { suite, it } from 'node:test';
+import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
 
-import { ESLint } from 'eslint';
+import { ESLint, type Linter } from 'eslint';
 import path from 'node:path';
 
 const eslint = new ESLint();
 
-suite('each file inside rules must have an error related to that rule', () => {
+describe('each file inside rules must have an error related to that rule', () => {
+  function mapMessagesForSnapshot(
+    messages: Array<Linter.LintMessage> | undefined,
+  ): Array<{ ruleId: string | null; line: number }> {
+    if (!Array.isArray(messages)) return [];
+    return messages.map((m) => ({ ruleId: m.ruleId, line: m.line }));
+  }
+
   const rulesFolderPath = path.join('.', 'src', 'rules');
 
   it('array-style', async () => {
@@ -39,11 +46,17 @@ suite('each file inside rules must have an error related to that rule', () => {
     ]);
 
     assert.deepStrictEqual(
-      result[0]?.messages.map((m) => m.ruleId),
+      mapMessagesForSnapshot(result.at(0)?.messages),
       [
-        'zod-x/no-empty-custom-schema',
+        {
+          line: 3,
+          ruleId: 'zod-x/no-empty-custom-schema',
+        },
         // require-error-message is triggered as side effect
-        'zod-x/require-error-message',
+        {
+          line: 3,
+          ruleId: 'zod-x/require-error-message',
+        },
       ],
       'should include no-empty-custom-schema linting error',
     );
@@ -55,19 +68,19 @@ suite('each file inside rules must have an error related to that rule', () => {
     ]);
 
     assert.deepStrictEqual(
-      result[0]?.messages.map((m) => ({ ruleId: m.ruleId, line: m.line })),
+      mapMessagesForSnapshot(result.at(0)?.messages),
       [
         {
+          ruleId: 'zod-x/no-number-schema-with-int',
           line: 3,
-          ruleId: 'zod-x/no-number-schema-with-int',
         },
         {
+          ruleId: 'zod-x/no-number-schema-with-int',
           line: 4,
-          ruleId: 'zod-x/no-number-schema-with-int',
         },
         {
-          line: 5,
           ruleId: 'zod-x/no-number-schema-with-int',
+          line: 5,
         },
       ],
       'should include no-number-schema-with-int linting error',
@@ -104,8 +117,17 @@ suite('each file inside rules must have an error related to that rule', () => {
     ]);
 
     assert.deepStrictEqual(
-      result[0]?.messages.map((m) => m.ruleId),
-      ['zod-x/prefer-meta-last'],
+      mapMessagesForSnapshot(result.at(0)?.messages),
+      [
+        {
+          ruleId: 'zod-x/prefer-meta-last',
+          line: 3,
+        },
+        {
+          ruleId: 'zod-x/prefer-meta-last',
+          line: 14,
+        },
+      ],
       'should include prefer-meta-last linting error',
     );
   });
@@ -128,8 +150,13 @@ suite('each file inside rules must have an error related to that rule', () => {
     ]);
 
     assert.deepStrictEqual(
-      result[0]?.messages.map((m) => m.ruleId),
-      ['zod-x/prefer-namespace-import'],
+      mapMessagesForSnapshot(result.at(0)?.messages),
+      [
+        {
+          ruleId: 'zod-x/prefer-namespace-import',
+          line: 1,
+        },
+      ],
       'should include prefer-namespace-import linting error',
     );
   });
@@ -140,23 +167,23 @@ suite('each file inside rules must have an error related to that rule', () => {
     ]);
 
     assert.deepStrictEqual(
-      result[0]?.messages.map((m) => ({ ruleId: m.ruleId, line: m.line })),
+      mapMessagesForSnapshot(result.at(0)?.messages),
       [
         {
+          ruleId: 'zod-x/require-error-message',
           line: 4,
-          ruleId: 'zod-x/require-error-message',
         },
         {
+          ruleId: 'zod-x/require-error-message',
           line: 5,
-          ruleId: 'zod-x/require-error-message',
         },
         {
+          ruleId: 'zod-x/require-error-message',
           line: 8,
-          ruleId: 'zod-x/require-error-message',
         },
         {
-          line: 9,
           ruleId: 'zod-x/require-error-message',
+          line: 9,
         },
       ],
       'should include require-error-message linting error',
@@ -169,8 +196,51 @@ suite('each file inside rules must have an error related to that rule', () => {
     ]);
 
     assert.deepStrictEqual(
-      result[0]?.messages.map((m) => m.ruleId),
-      ['zod-x/require-schema-suffix'],
+      mapMessagesForSnapshot(result.at(0)?.messages),
+      [
+        {
+          ruleId: 'zod-x/require-schema-suffix',
+          line: 3,
+        },
+      ],
+      'should include require-schema-suffix linting error',
+    );
+  });
+
+  it('schema-error-property-style', async () => {
+    const result = await eslint.lintFiles([
+      path.join(rulesFolderPath, 'schema-error-property-style.ts'),
+    ]);
+
+    assert.deepStrictEqual(
+      mapMessagesForSnapshot(result.at(0)?.messages),
+      [
+        {
+          ruleId: 'zod-x/schema-error-property-style',
+          line: 4,
+        },
+      ],
+      'should include require-schema-suffix linting error',
+    );
+  });
+
+  it('require-brand-type-parameter', async () => {
+    const result = await eslint.lintFiles([
+      path.join(rulesFolderPath, 'require-brand-type-parameter.ts'),
+    ]);
+
+    assert.deepStrictEqual(
+      mapMessagesForSnapshot(result.at(0)?.messages),
+      [
+        {
+          ruleId: 'zod-x/require-brand-type-parameter',
+          line: 3,
+        },
+        {
+          ruleId: 'zod-x/require-brand-type-parameter',
+          line: 4,
+        },
+      ],
       'should include require-schema-suffix linting error',
     );
   });
