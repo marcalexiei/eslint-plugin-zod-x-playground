@@ -24,4 +24,16 @@ export default defineConfig(
       },
     },
   },
+  {
+    files: ['src/rules-namespace/consistent-import-source.ts'],
+    rules: {
+      'zod-x/consistent-import-source': ['error'],
+    },
+  },
+  {
+    files: ['src/rules-named/*.ts'],
+    rules: {
+      'zod-x/prefer-namespace-import': ['off'],
+    },
+  },
 );

@@ -39,14 +39,8 @@ jobs:
         run: pnpm run test
 
   code-checks:
-    name: Code check (${{ matrix.script }})
+    name: Code checks
     runs-on: ubuntu-latest
-
-    strategy:
-      fail-fast: true
-      matrix:
-        script:
-          - 'format'
 
     steps:
       - name: Checkout

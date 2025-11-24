@@ -6,7 +6,7 @@ import path from 'node:path';
 
 const eslint = new ESLint();
 
-describe('each file inside rules must have an error related to that rule', () => {
+describe('namespace - each file inside rules must have an error related to that rule', () => {
   function mapMessagesForSnapshot(
     messages: Array<Linter.LintMessage> | undefined,
   ): Array<{ ruleId: string | null; line: number }> {
@@ -14,7 +14,7 @@ describe('each file inside rules must have an error related to that rule', () =>
     return messages.map((m) => ({ ruleId: m.ruleId, line: m.line }));
   }
 
-  const rulesFolderPath = path.join('.', 'src', 'rules');
+  const rulesFolderPath = path.join('.', 'src', 'rules-namespace');
 
   it('array-style', async () => {
     const result = await eslint.lintFiles([
@@ -26,6 +26,26 @@ describe('each file inside rules must have an error related to that rule', () =>
       ['zod-x/array-style'],
       'should include array-style linting error',
     );
+  });
+
+  it('consistent-import-source', async () => {
+    const result = await eslint.lintFiles([
+      path.join(rulesFolderPath, 'consistent-import-source.ts'),
+    ]);
+
+    const error = result.at(0)?.messages.at(0);
+    assert(error);
+
+    assert.strictEqual(error.line, 1);
+    assert.strictEqual(error.ruleId, 'zod-x/consistent-import-source');
+
+    assert(error.suggestions);
+    assert.strictEqual(error.suggestions.length, 1);
+
+    const suggestion = error.suggestions.at(0);
+    assert(suggestion);
+    assert.strictEqual(suggestion.desc, 'Replace "zod/v3" with "zod"');
+    assert.strictEqual(suggestion.messageId, 'replaceSource');
   });
 
   it('no-any', async () => {
@@ -155,6 +175,10 @@ describe('each file inside rules must have an error related to that rule', () =>
         {
           ruleId: 'zod-x/prefer-namespace-import',
           line: 1,
+        },
+        {
+          line: 2,
+          ruleId: 'zod-x/prefer-namespace-import',
         },
       ],
       'should include prefer-namespace-import linting error',
