@@ -48,6 +48,31 @@ describe('namespace - each file inside rules must have an error related to that 
     assert.strictEqual(suggestion.messageId, 'replaceSource');
   });
 
+  it('consistent-object-schema-type', async () => {
+    const result = await eslint.lintFiles([
+      path.join(rulesFolderPath, 'consistent-object-schema-type.ts'),
+    ]);
+
+    assert.deepStrictEqual(
+      mapMessagesForSnapshot(result.at(0)?.messages),
+      [
+        {
+          ruleId: 'zod-x/consistent-object-schema-type',
+          line: 3,
+        },
+        {
+          ruleId: 'zod-x/consistent-object-schema-type',
+          line: 4,
+        },
+        {
+          ruleId: 'zod-x/consistent-object-schema-type',
+          line: 6,
+        },
+      ],
+      'should include consistent-object-schema-type linting error',
+    );
+  });
+
   it('no-any', async () => {
     const result = await eslint.lintFiles([
       path.join(rulesFolderPath, 'no-any.ts'),
@@ -128,6 +153,23 @@ describe('namespace - each file inside rules must have an error related to that 
       result[0]?.messages.map((m) => m.ruleId),
       ['zod-x/no-throw-in-refine'],
       'should include no-throw-in-refine linting error',
+    );
+  });
+
+  it('no-unknown-schema', async () => {
+    const result = await eslint.lintFiles([
+      path.join(rulesFolderPath, 'no-unknown-schema.ts'),
+    ]);
+
+    assert.deepStrictEqual(
+      mapMessagesForSnapshot(result.at(0)?.messages),
+      [
+        {
+          ruleId: 'zod-x/no-unknown-schema',
+          line: 3,
+        },
+      ],
+      'should include no-unknown-schema linting error',
     );
   });
 

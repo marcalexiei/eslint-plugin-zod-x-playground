@@ -11,6 +11,7 @@ export default defineConfig(
     ...eslintPluginZodX.configs.recommended,
     rules: {
       ...eslintPluginZodX.configs.recommended.rules,
+      'zod-x/no-unknown-schema': ['error'],
       'zod-x/schema-error-property-style': ['error'],
     },
   },
@@ -28,6 +29,12 @@ export default defineConfig(
     files: ['src/rules-namespace/consistent-import-source.ts'],
     rules: {
       'zod-x/consistent-import-source': ['error'],
+    },
+  },
+  {
+    files: ['src/rules-namespace/consistent-object-schema-type.ts'],
+    rules: {
+      'zod-x/consistent-object-schema-type': ['error'],
     },
   },
   {
