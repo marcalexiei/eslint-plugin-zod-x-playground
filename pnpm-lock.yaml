@@ -25,8 +25,8 @@ importers:
         specifier: 9.35.0
         version: 9.35.0
       eslint-plugin-zod-x:
-        specifier: 1.13.0
-        version: 1.13.0(eslint@9.35.0)(typescript@5.9.2)(zod@4.1.5)
+        specifier: 1.13.1
+        version: 1.13.1(eslint@9.35.0)(typescript@5.9.2)(zod@4.1.5)
       prettier:
         specifier: 3.6.2
         version: 3.6.2
@@ -161,12 +161,6 @@ packages:
     peerDependencies:
       typescript: '>=4.8.4 <6.0.0'
 
-  '@typescript-eslint/tsconfig-utils@8.45.0':
-    resolution: {integrity: sha512-aFdr+c37sc+jqNMGhH+ajxPXwjv9UtFZk79k8pLoJ6p4y0snmYpPA52GuWHgt2ZF4gRRW6odsEj41uZLojDt5w==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-    peerDependencies:
-      typescript: '>=4.8.4 <6.0.0'
-
   '@typescript-eslint/tsconfig-utils@8.49.0':
     resolution: {integrity: sha512-8prixNi1/6nawsRYxet4YOhnbW+W9FK/bQPxsGB1D3ZrDzbJ5FXw5XmzxZv82X3B+ZccuSxo/X8q9nQ+mFecWA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -182,10 +176,6 @@ packages:
 
   '@typescript-eslint/types@8.43.0':
     resolution: {integrity: sha512-vQ2FZaxJpydjSZJKiSW/LJsabFFvV7KgLC5DiLhkBcykhQj8iK9BOaDmQt74nnKdLvceM5xmhaTF+pLekrxEkw==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-
-  '@typescript-eslint/types@8.45.0':
-    resolution: {integrity: sha512-WugXLuOIq67BMgQInIxxnsSyRLFxdkJEJu8r4ngLR56q/4Q5LrbfkFRH27vMTjxEK8Pyz7QfzuZe/G15qQnVRA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@typescript-eslint/types@8.49.0':
@@ -297,8 +287,8 @@ packages:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
 
-  eslint-plugin-zod-x@1.13.0:
-    resolution: {integrity: sha512-BQMDIpOGPdmsO1fwfbmbogW5G4MG1DjLnlnEfI1ih6ZI1H+72U834FHpJN5s6wDtgVlI4iq90/O47OKnTV8kDg==}
+  eslint-plugin-zod-x@1.13.1:
+    resolution: {integrity: sha512-fLzqVLxTiDsQFANmxsazmVWTS2/VDfUT0xGJ1LjiO5vtCUGs3zOE2bQaUPVOk6NOcXfwfw0CIa6E2M9HTEOX3Q==}
     engines: {node: ^20 || ^22 || >=24}
     peerDependencies:
       eslint: ^9
@@ -735,8 +725,8 @@ snapshots:
 
   '@typescript-eslint/project-service@8.43.0(typescript@5.9.2)':
     dependencies:
-      '@typescript-eslint/tsconfig-utils': 8.45.0(typescript@5.9.2)
-      '@typescript-eslint/types': 8.45.0
+      '@typescript-eslint/tsconfig-utils': 8.49.0(typescript@5.9.2)
+      '@typescript-eslint/types': 8.49.0
       debug: 4.4.1
       typescript: 5.9.2
     transitivePeerDependencies:
@@ -765,10 +755,6 @@ snapshots:
     dependencies:
       typescript: 5.9.2
 
-  '@typescript-eslint/tsconfig-utils@8.45.0(typescript@5.9.2)':
-    dependencies:
-      typescript: 5.9.2
-
   '@typescript-eslint/tsconfig-utils@8.49.0(typescript@5.9.2)':
     dependencies:
       typescript: 5.9.2
@@ -786,8 +772,6 @@ snapshots:
       - supports-color
 
   '@typescript-eslint/types@8.43.0': {}
-
-  '@typescript-eslint/types@8.45.0': {}
 
   '@typescript-eslint/types@8.49.0': {}
 
@@ -917,7 +901,7 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
-  eslint-plugin-zod-x@1.13.0(eslint@9.35.0)(typescript@5.9.2)(zod@4.1.5):
+  eslint-plugin-zod-x@1.13.1(eslint@9.35.0)(typescript@5.9.2)(zod@4.1.5):
     dependencies:
       '@typescript-eslint/utils': 8.49.0(eslint@9.35.0)(typescript@5.9.2)
       eslint: 9.35.0

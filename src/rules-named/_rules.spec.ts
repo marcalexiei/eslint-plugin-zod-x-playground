@@ -1,7 +1,7 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
 
-import { ESLint, type Linter } from 'eslint';
+import { ESLint } from 'eslint';
 import path from 'node:path';
 
 const eslint = new ESLint();

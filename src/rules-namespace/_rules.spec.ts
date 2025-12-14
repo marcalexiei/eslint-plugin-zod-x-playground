@@ -7,9 +7,13 @@ import path from 'node:path';
 const eslint = new ESLint();
 
 describe('namespace - each file inside rules must have an error related to that rule', () => {
+  interface MessageForSnapshot {
+    ruleId: string | null;
+    line: number;
+  }
   function mapMessagesForSnapshot(
     messages: Array<Linter.LintMessage> | undefined,
-  ): Array<{ ruleId: string | null; line: number }> {
+  ): Array<MessageForSnapshot> {
     if (!Array.isArray(messages)) return [];
     return messages.map((m) => ({ ruleId: m.ruleId, line: m.line }));
   }
@@ -53,7 +57,7 @@ describe('namespace - each file inside rules must have an error related to that 
       path.join(rulesFolderPath, 'consistent-object-schema-type.ts'),
     ]);
 
-    assert.deepStrictEqual(
+    assert.deepStrictEqual<Array<MessageForSnapshot>>(
       mapMessagesForSnapshot(result.at(0)?.messages),
       [
         {
@@ -78,9 +82,18 @@ describe('namespace - each file inside rules must have an error related to that 
       path.join(rulesFolderPath, 'no-any.ts'),
     ]);
 
-    assert.deepStrictEqual(
-      result[0]?.messages.map((m) => m.ruleId),
-      ['zod-x/no-any'],
+    assert.deepStrictEqual<Array<MessageForSnapshot>>(
+      mapMessagesForSnapshot(result.at(0)?.messages),
+      [
+        {
+          line: 3,
+          ruleId: 'zod-x/no-any',
+        },
+        {
+          line: 5,
+          ruleId: 'zod-x/no-any',
+        },
+      ],
       'should include no-any linting error',
     );
   });
@@ -112,7 +125,7 @@ describe('namespace - each file inside rules must have an error related to that 
       path.join(rulesFolderPath, 'no-number-schema-with-int.ts'),
     ]);
 
-    assert.deepStrictEqual(
+    assert.deepStrictEqual<Array<MessageForSnapshot>>(
       mapMessagesForSnapshot(result.at(0)?.messages),
       [
         {
@@ -161,7 +174,7 @@ describe('namespace - each file inside rules must have an error related to that 
       path.join(rulesFolderPath, 'no-unknown-schema.ts'),
     ]);
 
-    assert.deepStrictEqual(
+    assert.deepStrictEqual<Array<MessageForSnapshot>>(
       mapMessagesForSnapshot(result.at(0)?.messages),
       [
         {
@@ -178,7 +191,7 @@ describe('namespace - each file inside rules must have an error related to that 
       path.join(rulesFolderPath, 'prefer-meta-last.ts'),
     ]);
 
-    assert.deepStrictEqual(
+    assert.deepStrictEqual<Array<MessageForSnapshot>>(
       mapMessagesForSnapshot(result.at(0)?.messages),
       [
         {
@@ -211,7 +224,7 @@ describe('namespace - each file inside rules must have an error related to that 
       path.join(rulesFolderPath, 'prefer-namespace-import.ts'),
     ]);
 
-    assert.deepStrictEqual(
+    assert.deepStrictEqual<Array<MessageForSnapshot>>(
       mapMessagesForSnapshot(result.at(0)?.messages),
       [
         {
@@ -232,7 +245,7 @@ describe('namespace - each file inside rules must have an error related to that 
       path.join(rulesFolderPath, 'require-error-message.ts'),
     ]);
 
-    assert.deepStrictEqual(
+    assert.deepStrictEqual<Array<MessageForSnapshot>>(
       mapMessagesForSnapshot(result.at(0)?.messages),
       [
         {
@@ -261,7 +274,7 @@ describe('namespace - each file inside rules must have an error related to that 
       path.join(rulesFolderPath, 'require-schema-suffix.ts'),
     ]);
 
-    assert.deepStrictEqual(
+    assert.deepStrictEqual<Array<MessageForSnapshot>>(
       mapMessagesForSnapshot(result.at(0)?.messages),
       [
         {
@@ -278,7 +291,7 @@ describe('namespace - each file inside rules must have an error related to that 
       path.join(rulesFolderPath, 'schema-error-property-style.ts'),
     ]);
 
-    assert.deepStrictEqual(
+    assert.deepStrictEqual<Array<MessageForSnapshot>>(
       mapMessagesForSnapshot(result.at(0)?.messages),
       [
         {
@@ -295,7 +308,7 @@ describe('namespace - each file inside rules must have an error related to that 
       path.join(rulesFolderPath, 'require-brand-type-parameter.ts'),
     ]);
 
-    assert.deepStrictEqual(
+    assert.deepStrictEqual<Array<MessageForSnapshot>>(
       mapMessagesForSnapshot(result.at(0)?.messages),
       [
         {
