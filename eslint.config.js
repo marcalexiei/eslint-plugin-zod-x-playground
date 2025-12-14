@@ -38,6 +38,12 @@ export default defineConfig(
     },
   },
   {
+    files: ['src/rules-namespace/array-style-method.ts'],
+    rules: {
+      'zod-x/array-style': ['error', { style: 'method' }],
+    },
+  },
+  {
     files: ['src/rules-named/*.ts'],
     rules: {
       'zod-x/prefer-namespace-import': ['off'],

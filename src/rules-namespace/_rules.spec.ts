@@ -20,9 +20,21 @@ describe('namespace - each file inside rules must have an error related to that 
 
   const rulesFolderPath = path.join('.', 'src', 'rules-namespace');
 
-  it('array-style', async () => {
+  it('array-style (function)', async () => {
     const result = await eslint.lintFiles([
-      path.join(rulesFolderPath, 'array-style.ts'),
+      path.join(rulesFolderPath, 'array-style-function.ts'),
+    ]);
+
+    assert.deepStrictEqual(
+      result[0]?.messages.map((m) => m.ruleId),
+      ['zod-x/array-style'],
+      'should include array-style linting error',
+    );
+  });
+
+  it('array-style (method)', async () => {
+    const result = await eslint.lintFiles([
+      path.join(rulesFolderPath, 'array-style-method.ts'),
     ]);
 
     assert.deepStrictEqual(
