@@ -16,14 +16,14 @@ describe('named - each file inside rules must have an error related to that rule
 
   const rulesFolderPath = path.join('.', 'src', 'rules-named');
 
-  it('no-any', async () => {
+  it('no-any-schema', async () => {
     const result = await eslint.lintFiles([
-      path.join(rulesFolderPath, 'no-any.ts'),
+      path.join(rulesFolderPath, 'no-any-schema.ts'),
     ]);
 
     assert.deepStrictEqual(
       result[0]?.messages.map((m) => m.ruleId),
-      ['zod-x/no-any'],
+      ['zod-x/no-any-schema'],
       'should include no-any linting error',
     );
   });

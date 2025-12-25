@@ -89,9 +89,9 @@ describe('namespace - each file inside rules must have an error related to that 
     );
   });
 
-  it('no-any', async () => {
+  it('no-any-schema', async () => {
     const result = await eslint.lintFiles([
-      path.join(rulesFolderPath, 'no-any.ts'),
+      path.join(rulesFolderPath, 'no-any-schema.ts'),
     ]);
 
     assert.deepStrictEqual<Array<MessageForSnapshot>>(
@@ -99,14 +99,14 @@ describe('namespace - each file inside rules must have an error related to that 
       [
         {
           line: 3,
-          ruleId: 'zod-x/no-any',
+          ruleId: 'zod-x/no-any-schema',
         },
         {
           line: 5,
-          ruleId: 'zod-x/no-any',
+          ruleId: 'zod-x/no-any-schema',
         },
       ],
-      'should include no-any linting error',
+      'should include no-any-schema linting error',
     );
   });
 
