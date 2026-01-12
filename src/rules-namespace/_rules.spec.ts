@@ -247,6 +247,10 @@ describe('namespace - each file inside rules must have an error related to that 
           line: 2,
           ruleId: 'zod-x/prefer-namespace-import',
         },
+        {
+          line: 3,
+          ruleId: 'zod-x/prefer-namespace-import',
+        },
       ],
       'should include prefer-namespace-import linting error',
     );

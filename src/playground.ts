@@ -1,3 +1,4 @@
-import { test } from '@playwright/test';
+import * as z from 'zod';
 
-test.describe('test', () => {});
+z.custom(() => 'asd', `asd`);
+z.custom(() => true, { error: () => 'my error' });
