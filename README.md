@@ -1,3 +1,3 @@
-# eslint-plugin-zod-x-playground
+# eslint-plugin-zod-playground
 
-Testing [eslint-plugin-zod-x](https://github.com/marcalexiei/eslint-plugin-zod-x).
+Testing [eslint-plugin-zod](https://github.com/marcalexiei/eslint-plugin-zod).

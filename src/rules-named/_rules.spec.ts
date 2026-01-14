@@ -23,7 +23,7 @@ describe('named - each file inside rules must have an error related to that rule
 
     assert.deepStrictEqual(
       result[0]?.messages.map((m) => m.ruleId),
-      ['zod-x/no-any-schema'],
+      ['zod/no-any-schema'],
       'should include no-any linting error',
     );
   });

@@ -27,7 +27,7 @@ describe('namespace - each file inside rules must have an error related to that 
 
     assert.deepStrictEqual(
       result[0]?.messages.map((m) => m.ruleId),
-      ['zod-x/array-style'],
+      ['zod/array-style'],
       'should include array-style linting error',
     );
   });
@@ -39,7 +39,7 @@ describe('namespace - each file inside rules must have an error related to that 
 
     assert.deepStrictEqual(
       result[0]?.messages.map((m) => m.ruleId),
-      ['zod-x/array-style'],
+      ['zod/array-style'],
       'should include array-style linting error',
     );
   });
@@ -53,7 +53,7 @@ describe('namespace - each file inside rules must have an error related to that 
     assert(error);
 
     assert.strictEqual(error.line, 1);
-    assert.strictEqual(error.ruleId, 'zod-x/consistent-import-source');
+    assert.strictEqual(error.ruleId, 'zod/consistent-import-source');
 
     assert(error.suggestions);
     assert.strictEqual(error.suggestions.length, 1);
@@ -73,15 +73,15 @@ describe('namespace - each file inside rules must have an error related to that 
       mapMessagesForSnapshot(result.at(0)?.messages),
       [
         {
-          ruleId: 'zod-x/consistent-object-schema-type',
+          ruleId: 'zod/consistent-object-schema-type',
           line: 3,
         },
         {
-          ruleId: 'zod-x/consistent-object-schema-type',
+          ruleId: 'zod/consistent-object-schema-type',
           line: 4,
         },
         {
-          ruleId: 'zod-x/consistent-object-schema-type',
+          ruleId: 'zod/consistent-object-schema-type',
           line: 6,
         },
       ],
@@ -99,11 +99,11 @@ describe('namespace - each file inside rules must have an error related to that 
       [
         {
           line: 3,
-          ruleId: 'zod-x/no-any-schema',
+          ruleId: 'zod/no-any-schema',
         },
         {
           line: 5,
-          ruleId: 'zod-x/no-any-schema',
+          ruleId: 'zod/no-any-schema',
         },
       ],
       'should include no-any-schema linting error',
@@ -120,12 +120,12 @@ describe('namespace - each file inside rules must have an error related to that 
       [
         {
           line: 3,
-          ruleId: 'zod-x/no-empty-custom-schema',
+          ruleId: 'zod/no-empty-custom-schema',
         },
         // require-error-message is triggered as side effect
         {
           line: 3,
-          ruleId: 'zod-x/require-error-message',
+          ruleId: 'zod/require-error-message',
         },
       ],
       'should include no-empty-custom-schema linting error',
@@ -141,15 +141,15 @@ describe('namespace - each file inside rules must have an error related to that 
       mapMessagesForSnapshot(result.at(0)?.messages),
       [
         {
-          ruleId: 'zod-x/no-number-schema-with-int',
+          ruleId: 'zod/no-number-schema-with-int',
           line: 3,
         },
         {
-          ruleId: 'zod-x/no-number-schema-with-int',
+          ruleId: 'zod/no-number-schema-with-int',
           line: 4,
         },
         {
-          ruleId: 'zod-x/no-number-schema-with-int',
+          ruleId: 'zod/no-number-schema-with-int',
           line: 5,
         },
       ],
@@ -164,7 +164,7 @@ describe('namespace - each file inside rules must have an error related to that 
 
     assert.deepStrictEqual(
       result[0]?.messages.map((m) => m.ruleId),
-      ['zod-x/no-optional-and-default-together'],
+      ['zod/no-optional-and-default-together'],
       'should include no-optional-and-default-together linting error',
     );
   });
@@ -176,7 +176,7 @@ describe('namespace - each file inside rules must have an error related to that 
 
     assert.deepStrictEqual(
       result[0]?.messages.map((m) => m.ruleId),
-      ['zod-x/no-throw-in-refine'],
+      ['zod/no-throw-in-refine'],
       'should include no-throw-in-refine linting error',
     );
   });
@@ -190,11 +190,28 @@ describe('namespace - each file inside rules must have an error related to that 
       mapMessagesForSnapshot(result.at(0)?.messages),
       [
         {
-          ruleId: 'zod-x/no-unknown-schema',
+          ruleId: 'zod/no-unknown-schema',
           line: 3,
         },
       ],
       'should include no-unknown-schema linting error',
+    );
+  });
+
+  it('prefer-enum-over-literal-union', async () => {
+    const result = await eslint.lintFiles([
+      path.join(rulesFolderPath, 'prefer-enum-over-literal-union.ts'),
+    ]);
+
+    assert.deepStrictEqual<Array<MessageForSnapshot>>(
+      mapMessagesForSnapshot(result.at(0)?.messages),
+      [
+        {
+          ruleId: 'zod/prefer-enum-over-literal-union',
+          line: 3,
+        },
+      ],
+      'should include prefer-enum-over-literal-union linting error',
     );
   });
 
@@ -207,11 +224,11 @@ describe('namespace - each file inside rules must have an error related to that 
       mapMessagesForSnapshot(result.at(0)?.messages),
       [
         {
-          ruleId: 'zod-x/prefer-meta-last',
+          ruleId: 'zod/prefer-meta-last',
           line: 3,
         },
         {
-          ruleId: 'zod-x/prefer-meta-last',
+          ruleId: 'zod/prefer-meta-last',
           line: 14,
         },
       ],
@@ -226,7 +243,7 @@ describe('namespace - each file inside rules must have an error related to that 
 
     assert.deepStrictEqual(
       result[0]?.messages.map((m) => m.ruleId),
-      ['zod-x/prefer-meta'],
+      ['zod/prefer-meta'],
       'should include prefer-meta linting error',
     );
   });
@@ -240,16 +257,16 @@ describe('namespace - each file inside rules must have an error related to that 
       mapMessagesForSnapshot(result.at(0)?.messages),
       [
         {
-          ruleId: 'zod-x/prefer-namespace-import',
+          ruleId: 'zod/prefer-namespace-import',
           line: 1,
         },
         {
           line: 2,
-          ruleId: 'zod-x/prefer-namespace-import',
+          ruleId: 'zod/prefer-namespace-import',
         },
         {
           line: 3,
-          ruleId: 'zod-x/prefer-namespace-import',
+          ruleId: 'zod/prefer-namespace-import',
         },
       ],
       'should include prefer-namespace-import linting error',
@@ -265,19 +282,19 @@ describe('namespace - each file inside rules must have an error related to that 
       mapMessagesForSnapshot(result.at(0)?.messages),
       [
         {
-          ruleId: 'zod-x/require-error-message',
+          ruleId: 'zod/require-error-message',
           line: 4,
         },
         {
-          ruleId: 'zod-x/require-error-message',
+          ruleId: 'zod/require-error-message',
           line: 5,
         },
         {
-          ruleId: 'zod-x/require-error-message',
+          ruleId: 'zod/require-error-message',
           line: 8,
         },
         {
-          ruleId: 'zod-x/require-error-message',
+          ruleId: 'zod/require-error-message',
           line: 9,
         },
       ],
@@ -294,7 +311,7 @@ describe('namespace - each file inside rules must have an error related to that 
       mapMessagesForSnapshot(result.at(0)?.messages),
       [
         {
-          ruleId: 'zod-x/require-schema-suffix',
+          ruleId: 'zod/require-schema-suffix',
           line: 3,
         },
       ],
@@ -311,7 +328,7 @@ describe('namespace - each file inside rules must have an error related to that 
       mapMessagesForSnapshot(result.at(0)?.messages),
       [
         {
-          ruleId: 'zod-x/schema-error-property-style',
+          ruleId: 'zod/schema-error-property-style',
           line: 4,
         },
       ],
@@ -328,11 +345,11 @@ describe('namespace - each file inside rules must have an error related to that 
       mapMessagesForSnapshot(result.at(0)?.messages),
       [
         {
-          ruleId: 'zod-x/require-brand-type-parameter',
+          ruleId: 'zod/require-brand-type-parameter',
           line: 3,
         },
         {
-          ruleId: 'zod-x/require-brand-type-parameter',
+          ruleId: 'zod/require-brand-type-parameter',
           line: 4,
         },
       ],

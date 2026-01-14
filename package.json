@@ -1,5 +1,5 @@
 {
-  "name": "eslint-plugin-zod-x-playground",
+  "name": "eslint-plugin-zod-playground",
   "version": "1.0.0",
   "description": "",
   "type": "module",
@@ -18,7 +18,7 @@
     "@marcalexiei/prettier-config": "1.1.4",
     "@types/node": "24.3.1",
     "eslint": "9.39.2",
-    "eslint-plugin-zod-x": "2.0.1",
+    "eslint-plugin-zod": "3.0.0",
     "prettier": "3.7.4",
     "typescript": "5.9.3",
     "typescript-eslint": "8.50.1"
