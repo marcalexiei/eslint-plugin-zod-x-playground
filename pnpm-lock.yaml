@@ -25,8 +25,8 @@ importers:
         specifier: 9.39.2
         version: 9.39.2
       eslint-plugin-zod:
-        specifier: 3.0.1
-        version: 3.0.1(eslint@9.39.2)(typescript@5.9.3)(zod@4.2.1)
+        specifier: 3.0.2
+        version: 3.0.2(eslint@9.39.2)(typescript@5.9.3)(zod@4.2.1)
       prettier:
         specifier: 3.7.4
         version: 3.7.4
@@ -234,8 +234,8 @@ packages:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
 
-  eslint-plugin-zod@3.0.1:
-    resolution: {integrity: sha512-UdiVKkymV2VUyeWDVHj+o4Ai8oqn2Atv/dDdItL6dNooVFL+TSj/Pl+kdJw4dVQ91BPy+u+eQxDr2/ZQWn/gjQ==}
+  eslint-plugin-zod@3.0.2:
+    resolution: {integrity: sha512-7kSjTV31ThWfosyVqi4n1dcd2Egle6oO9Vntql0EXCytbSFPF4K1id2+E+e0sb/EZIAI4OznLHLzj/v9a1yW/g==}
     engines: {node: ^20 || ^22 || >=24}
     peerDependencies:
       eslint: ^9
@@ -733,7 +733,7 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
-  eslint-plugin-zod@3.0.1(eslint@9.39.2)(typescript@5.9.3)(zod@4.2.1):
+  eslint-plugin-zod@3.0.2(eslint@9.39.2)(typescript@5.9.3)(zod@4.2.1):
     dependencies:
       '@typescript-eslint/utils': 8.50.1(eslint@9.39.2)(typescript@5.9.3)
       eslint: 9.39.2

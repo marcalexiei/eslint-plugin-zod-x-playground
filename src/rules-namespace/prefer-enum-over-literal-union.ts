@@ -1,6 +1,11 @@
 import * as z from 'zod';
 
-z.union([z.literal('foo'), z.literal('bar')]);
+z.union([z.literal('foo'), z.literal('bar')]).optional();
+
+z.looseObject({
+  modifiedTime: z.string().optional(),
+  size: z.union([z.literal('foo'), z.literal('bar')]),
+});
 
 z.looseObject({
   modifiedTime: z.string().optional(),

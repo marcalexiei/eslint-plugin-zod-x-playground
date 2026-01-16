@@ -210,6 +210,10 @@ describe('namespace - each file inside rules must have an error related to that 
           ruleId: 'zod/prefer-enum-over-literal-union',
           line: 3,
         },
+        {
+          line: 7,
+          ruleId: 'zod/prefer-enum-over-literal-union',
+        },
       ],
       'should include prefer-enum-over-literal-union linting error',
     );
