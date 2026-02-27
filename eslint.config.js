@@ -46,7 +46,13 @@ export default defineConfig(
   {
     files: ['src/rules-named/*.ts'],
     rules: {
-      'zod/prefer-namespace-import': ['off'],
+      'zod/consistent-import': ['off'],
+    },
+  },
+  {
+    files: ['src/rules-named-z/*.ts'],
+    rules: {
+      'zod/consistent-import': ['error', { syntax: 'named' }],
     },
   },
 );

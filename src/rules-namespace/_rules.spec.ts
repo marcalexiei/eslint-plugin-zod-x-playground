@@ -64,6 +64,31 @@ describe('namespace - each file inside rules must have an error related to that 
     assert.strictEqual(suggestion.messageId, 'replaceSource');
   });
 
+  it('consistent-import', async () => {
+    const result = await eslint.lintFiles([
+      path.join(rulesFolderPath, 'consistent-import.ts'),
+    ]);
+
+    assert.deepStrictEqual<Array<MessageForSnapshot>>(
+      mapMessagesForSnapshot(result.at(0)?.messages),
+      [
+        {
+          ruleId: 'zod/consistent-import',
+          line: 1,
+        },
+        {
+          line: 2,
+          ruleId: 'zod/consistent-import',
+        },
+        {
+          line: 3,
+          ruleId: 'zod/consistent-import',
+        },
+      ],
+      'should include prefer-namespace-import linting error',
+    );
+  });
+
   it('consistent-object-schema-type', async () => {
     const result = await eslint.lintFiles([
       path.join(rulesFolderPath, 'consistent-object-schema-type.ts'),
@@ -169,6 +194,23 @@ describe('namespace - each file inside rules must have an error related to that 
     );
   });
 
+  it('no-string-schema-with-uuid', async () => {
+    const result = await eslint.lintFiles([
+      path.join(rulesFolderPath, 'no-string-schema-with-uuid.ts'),
+    ]);
+
+    assert.deepStrictEqual<Array<MessageForSnapshot>>(
+      mapMessagesForSnapshot(result.at(0)?.messages),
+      [
+        {
+          ruleId: 'zod/no-string-schema-with-uuid',
+          line: 3,
+        },
+      ],
+      'should include no-string-schema-with-uuid linting error',
+    );
+  });
+
   it('no-throw-in-refine', async () => {
     const result = await eslint.lintFiles([
       path.join(rulesFolderPath, 'no-throw-in-refine.ts'),
@@ -252,31 +294,6 @@ describe('namespace - each file inside rules must have an error related to that 
     );
   });
 
-  it('prefer-namespace-import', async () => {
-    const result = await eslint.lintFiles([
-      path.join(rulesFolderPath, 'prefer-namespace-import.ts'),
-    ]);
-
-    assert.deepStrictEqual<Array<MessageForSnapshot>>(
-      mapMessagesForSnapshot(result.at(0)?.messages),
-      [
-        {
-          ruleId: 'zod/prefer-namespace-import',
-          line: 1,
-        },
-        {
-          line: 2,
-          ruleId: 'zod/prefer-namespace-import',
-        },
-        {
-          line: 3,
-          ruleId: 'zod/prefer-namespace-import',
-        },
-      ],
-      'should include prefer-namespace-import linting error',
-    );
-  });
-
   it('require-error-message', async () => {
     const result = await eslint.lintFiles([
       path.join(rulesFolderPath, 'require-error-message.ts'),
@@ -334,6 +351,23 @@ describe('namespace - each file inside rules must have an error related to that 
         {
           ruleId: 'zod/schema-error-property-style',
           line: 4,
+        },
+      ],
+      'should include require-schema-suffix linting error',
+    );
+  });
+
+  it('prefer-string-schema-with-trim', async () => {
+    const result = await eslint.lintFiles([
+      path.join(rulesFolderPath, 'prefer-string-schema-with-trim.ts'),
+    ]);
+
+    assert.deepStrictEqual<Array<MessageForSnapshot>>(
+      mapMessagesForSnapshot(result.at(0)?.messages),
+      [
+        {
+          ruleId: 'zod/prefer-string-schema-with-trim',
+          line: 3,
         },
       ],
       'should include require-schema-suffix linting error',
