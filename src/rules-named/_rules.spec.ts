@@ -14,7 +14,7 @@ describe('named - each file inside rules must have an error related to that rule
   //   return messages.map((m) => ({ ruleId: m.ruleId, line: m.line }));
   // }
 
-  const rulesFolderPath = path.join('.', 'src', 'rules-named');
+  const rulesFolderPath = import.meta.dirname;
 
   it('no-any-schema', async () => {
     const result = await eslint.lintFiles([

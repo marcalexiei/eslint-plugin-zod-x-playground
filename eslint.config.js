@@ -8,14 +8,6 @@ export default defineConfig(
   eslint.configs.recommended,
   tseslint.configs.recommended,
   {
-    ...eslintPluginZod.configs.recommended,
-    rules: {
-      ...eslintPluginZod.configs.recommended.rules,
-      'zod/no-unknown-schema': ['error'],
-      'zod/schema-error-property-style': ['error'],
-    },
-  },
-  {
     languageOptions: {
       parserOptions: {
         projectService: {
@@ -23,6 +15,15 @@ export default defineConfig(
         },
         tsconfigRootDir: import.meta.dirname,
       },
+    },
+  },
+  {
+    ...eslintPluginZod.configs.recommended,
+    files: ['src/**'],
+    rules: {
+      ...eslintPluginZod.configs.recommended.rules,
+      'zod/no-unknown-schema': ['error'],
+      'zod/schema-error-property-style': ['error'],
     },
   },
   {
@@ -54,5 +55,10 @@ export default defineConfig(
     rules: {
       'zod/consistent-import': ['error', { syntax: 'named' }],
     },
+  },
+
+  {
+    ...eslintPluginZod.configs.recommendedMini,
+    files: ['src/zod-mini/**'],
   },
 );
