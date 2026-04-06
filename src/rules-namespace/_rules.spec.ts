@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 
 import { ESLint, type Linter } from 'eslint';
 import path from 'node:path';
+import { mapEslintMessagesForSnapshot, runOxlint } from '../test-utils.ts';
 
 const eslint = new ESLint();
 
@@ -20,28 +21,40 @@ describe('namespace - each file inside rules must have an error related to that 
 
   const rulesFolderPath = import.meta.dirname;
 
-  it('array-style (function)', async () => {
-    const result = await eslint.lintFiles([
-      path.join(rulesFolderPath, 'array-style-function.ts'),
-    ]);
+  describe('array-style (function)', async () => {
+    const filePath = path.join(rulesFolderPath, 'array-style-function.ts');
 
-    assert.deepStrictEqual(
-      result[0]?.messages.map((m) => m.ruleId),
-      ['zod/array-style'],
-      'should include array-style linting error',
-    );
+    it('eslint', async (t) => {
+      const result = await eslint.lintFiles([filePath]);
+
+      const messages = mapEslintMessagesForSnapshot(result.at(0)?.messages);
+      t.assert.snapshot(messages);
+    });
+
+    it('oxlint', async (t) => {
+      const { code, diagnostics } = await runOxlint(filePath);
+
+      assert.equal(code, 1);
+      t.assert.snapshot(diagnostics);
+    });
   });
 
-  it('array-style (method)', async () => {
-    const result = await eslint.lintFiles([
-      path.join(rulesFolderPath, 'array-style-method.ts'),
-    ]);
+  describe('array-style (method)', async () => {
+    const filePath = path.join(rulesFolderPath, 'array-style-method.ts');
 
-    assert.deepStrictEqual(
-      result[0]?.messages.map((m) => m.ruleId),
-      ['zod/array-style'],
-      'should include array-style linting error',
-    );
+    it('eslint', async (t) => {
+      const result = await eslint.lintFiles([filePath]);
+
+      const messages = mapEslintMessagesForSnapshot(result.at(0)?.messages);
+      t.assert.snapshot(messages);
+    });
+
+    it('oxlint', async (t) => {
+      const { code, diagnostics } = await runOxlint(filePath);
+
+      assert.equal(code, 1);
+      t.assert.snapshot(diagnostics);
+    });
   });
 
   it('consistent-import-source', async () => {
@@ -324,74 +337,83 @@ describe('namespace - each file inside rules must have an error related to that 
   });
 
   it('require-schema-suffix', async () => {
-    const result = await eslint.lintFiles([
-      path.join(rulesFolderPath, 'require-schema-suffix.ts'),
-    ]);
+    const filePath = path.join(rulesFolderPath, 'require-schema-suffix.ts');
 
-    assert.deepStrictEqual<Array<MessageForSnapshot>>(
-      mapMessagesForSnapshot(result.at(0)?.messages),
-      [
-        {
-          ruleId: 'zod/require-schema-suffix',
-          line: 3,
-        },
-      ],
-      'should include require-schema-suffix linting error',
-    );
+    it('eslint', async (t) => {
+      const result = await eslint.lintFiles([filePath]);
+
+      const messages = mapEslintMessagesForSnapshot(result.at(0)?.messages);
+      t.assert.snapshot(messages);
+    });
+
+    it('oxlint', async (t) => {
+      const { code, diagnostics } = await runOxlint(filePath);
+
+      assert.equal(code, 1);
+      t.assert.snapshot(diagnostics);
+    });
   });
 
-  it('schema-error-property-style', async () => {
-    const result = await eslint.lintFiles([
-      path.join(rulesFolderPath, 'schema-error-property-style.ts'),
-    ]);
-
-    assert.deepStrictEqual<Array<MessageForSnapshot>>(
-      mapMessagesForSnapshot(result.at(0)?.messages),
-      [
-        {
-          ruleId: 'zod/schema-error-property-style',
-          line: 4,
-        },
-      ],
-      'should include require-schema-suffix linting error',
+  describe('schema-error-property-style', async () => {
+    const filePath = path.join(
+      rulesFolderPath,
+      'schema-error-property-style.ts',
     );
+
+    it('eslint', async (t) => {
+      const result = await eslint.lintFiles([filePath]);
+
+      const messages = mapEslintMessagesForSnapshot(result.at(0)?.messages);
+      t.assert.snapshot(messages);
+    });
+
+    it('oxlint', async (t) => {
+      const { code, diagnostics } = await runOxlint(filePath);
+
+      assert.equal(code, 1);
+      t.assert.snapshot(diagnostics);
+    });
   });
 
-  it('prefer-string-schema-with-trim', async () => {
-    const result = await eslint.lintFiles([
-      path.join(rulesFolderPath, 'prefer-string-schema-with-trim.ts'),
-    ]);
-
-    assert.deepStrictEqual<Array<MessageForSnapshot>>(
-      mapMessagesForSnapshot(result.at(0)?.messages),
-      [
-        {
-          ruleId: 'zod/prefer-string-schema-with-trim',
-          line: 3,
-        },
-      ],
-      'should include require-schema-suffix linting error',
+  describe('prefer-string-schema-with-trim', async () => {
+    const filePath = path.join(
+      rulesFolderPath,
+      'prefer-string-schema-with-trim.ts',
     );
+
+    it('eslint', async (t) => {
+      const result = await eslint.lintFiles([filePath]);
+
+      const messages = mapEslintMessagesForSnapshot(result.at(0)?.messages);
+      t.assert.snapshot(messages);
+    });
+
+    it('oxlint', async (t) => {
+      const { code, diagnostics } = await runOxlint(filePath);
+
+      assert.equal(code, 1);
+      t.assert.snapshot(diagnostics);
+    });
   });
 
-  it('require-brand-type-parameter', async () => {
-    const result = await eslint.lintFiles([
-      path.join(rulesFolderPath, 'require-brand-type-parameter.ts'),
-    ]);
-
-    assert.deepStrictEqual<Array<MessageForSnapshot>>(
-      mapMessagesForSnapshot(result.at(0)?.messages),
-      [
-        {
-          ruleId: 'zod/require-brand-type-parameter',
-          line: 3,
-        },
-        {
-          ruleId: 'zod/require-brand-type-parameter',
-          line: 4,
-        },
-      ],
-      'should include require-schema-suffix linting error',
+  describe('require-brand-type-parameter', async () => {
+    const filePath = path.join(
+      rulesFolderPath,
+      'require-brand-type-parameter.ts',
     );
+
+    it('eslint', async (t) => {
+      const result = await eslint.lintFiles([filePath]);
+
+      const messages = mapEslintMessagesForSnapshot(result.at(0)?.messages);
+      t.assert.snapshot(messages);
+    });
+
+    it('oxlint', async (t) => {
+      const { code, diagnostics } = await runOxlint(filePath);
+
+      assert.equal(code, 1);
+      t.assert.snapshot(diagnostics);
+    });
   });
 });

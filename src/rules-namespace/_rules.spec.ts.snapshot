@@ -1,0 +1,129 @@
+exports[`namespace - each file inside rules must have an error related to that rule > array-style (function) > eslint 1`] = `
+[
+  {
+    "ruleId": "zod/array-style",
+    "line": 3
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > array-style (function) > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/array-style-function.ts",
+    "message": "Use z.array(schema) instead of schema.array().",
+    "code": "zod(array-style)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > array-style (method) > eslint 1`] = `
+[
+  {
+    "ruleId": "zod/array-style",
+    "line": 4
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > array-style (method) > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/array-style-method.ts",
+    "message": "Use schema.array() instead of z.array(schema).",
+    "code": "zod(array-style)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > prefer-string-schema-with-trim > eslint 1`] = `
+[
+  {
+    "ruleId": "zod/prefer-string-schema-with-trim",
+    "line": 3
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > prefer-string-schema-with-trim > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/prefer-string-schema-with-trim.ts",
+    "message": "\`z.string()\` schemas should use \`.trim()\`.",
+    "code": "zod(prefer-string-schema-with-trim)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > require-brand-type-parameter > eslint 1`] = `
+[
+  {
+    "ruleId": "zod/require-brand-type-parameter",
+    "line": 3
+  },
+  {
+    "ruleId": "zod/require-brand-type-parameter",
+    "line": 4
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > require-brand-type-parameter > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/require-brand-type-parameter.ts",
+    "message": "Type parameter is required when using \`.brand()\`",
+    "code": "zod(require-brand-type-parameter)",
+    "severity": "error"
+  },
+  {
+    "filename": "src/rules-namespace/require-brand-type-parameter.ts",
+    "message": "Type parameter is required when using \`.brand()\`",
+    "code": "zod(require-brand-type-parameter)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > require-schema-suffix > eslint 1`] = `
+[
+  {
+    "ruleId": "zod/require-schema-suffix",
+    "line": 3
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > require-schema-suffix > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/require-schema-suffix.ts",
+    "message": "Use the \\"Schema\\" suffix for Zod schemas. Rename this to \\"testSchema\\"",
+    "code": "zod(require-schema-suffix)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > schema-error-property-style > eslint 1`] = `
+[
+  {
+    "ruleId": "zod/schema-error-property-style",
+    "line": 4
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > schema-error-property-style > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/schema-error-property-style.ts",
+    "message": "Error message must follow the pattern \\"Literal,TemplateLiteral\\" (e.g., 'error message'). Found: () => 'my error'.",
+    "code": "zod(schema-error-property-style)",
+    "severity": "error"
+  }
+]
+`;

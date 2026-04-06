@@ -1,0 +1,49 @@
+exports[`named-z - each file inside rules must have an error related to that rule > consistent-import > eslint 1`] = `
+[
+  {
+    "ruleId": "zod/consistent-import",
+    "line": 1
+  },
+  {
+    "ruleId": "zod/consistent-import",
+    "line": 2
+  }
+]
+`;
+
+exports[`named-z - each file inside rules must have an error related to that rule > consistent-import > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-named-z/consistent-import.ts",
+    "message": "Use a named import for Zod.",
+    "code": "zod(consistent-import)",
+    "severity": "error"
+  },
+  {
+    "filename": "src/rules-named-z/consistent-import.ts",
+    "message": "Use a named import for Zod.",
+    "code": "zod(consistent-import)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`named-z - each file inside rules must have an error related to that rule > no-any-schema > eslint 1`] = `
+[
+  {
+    "ruleId": "zod/no-any-schema",
+    "line": 3
+  }
+]
+`;
+
+exports[`named-z - each file inside rules must have an error related to that rule > no-any-schema > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-named-z/no-any-schema.ts",
+    "message": "Using \`z.any()\` is not allowed. Please use a more specific schema.",
+    "code": "zod(no-any-schema)",
+    "severity": "error"
+  }
+]
+`;
