@@ -1,8 +1,8 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
+import path from 'node:path';
 
 import { ESLint } from 'eslint';
-import path from 'node:path';
 import { mapEslintMessagesForSnapshot, runOxlint } from '../test-utils.ts';
 
 const eslint = new ESLint();

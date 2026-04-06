@@ -25,6 +25,7 @@ jobs:
       matrix:
         node:
           - 24
+          - 25
 
     steps:
       - name: Checkout

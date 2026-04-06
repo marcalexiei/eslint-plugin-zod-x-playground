@@ -2,11 +2,13 @@ exports[`named-z - each file inside rules must have an error related to that rul
 [
   {
     "ruleId": "zod/consistent-import",
-    "line": 1
+    "line": 1,
+    "message": "Use a named import for Zod."
   },
   {
     "ruleId": "zod/consistent-import",
-    "line": 2
+    "line": 2,
+    "message": "Use a named import for Zod."
   }
 ]
 `;
@@ -32,7 +34,8 @@ exports[`named-z - each file inside rules must have an error related to that rul
 [
   {
     "ruleId": "zod/no-any-schema",
-    "line": 3
+    "line": 3,
+    "message": "Using \`z.any()\` is not allowed. Please use a more specific schema."
   }
 ]
 `;

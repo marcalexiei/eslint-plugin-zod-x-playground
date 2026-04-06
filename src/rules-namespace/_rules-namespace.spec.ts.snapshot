@@ -1,0 +1,551 @@
+exports[`namespace - each file inside rules must have an error related to that rule > array-style (function) > eslint 1`] = `
+[
+  {
+    "ruleId": "zod/array-style",
+    "line": 3,
+    "message": "Use z.array(schema) instead of schema.array()."
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > array-style (function) > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/array-style-function.ts",
+    "message": "Use z.array(schema) instead of schema.array().",
+    "code": "zod(array-style)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > array-style (method) > eslint 1`] = `
+[
+  {
+    "ruleId": "zod/array-style",
+    "line": 4,
+    "message": "Use schema.array() instead of z.array(schema)."
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > array-style (method) > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/array-style-method.ts",
+    "message": "Use schema.array() instead of z.array(schema).",
+    "code": "zod(array-style)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > consistent-import > eslint 1`] = `
+[
+  {
+    "ruleId": "zod/consistent-import",
+    "line": 1,
+    "message": "Use a namespace import for Zod."
+  },
+  {
+    "ruleId": "zod/consistent-import",
+    "line": 2,
+    "message": "Use a namespace import for Zod."
+  },
+  {
+    "ruleId": "zod/consistent-import",
+    "line": 3,
+    "message": "Use a namespace import for Zod."
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > consistent-import > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/consistent-import.ts",
+    "message": "Use a namespace import for Zod.",
+    "code": "zod(consistent-import)",
+    "severity": "error"
+  },
+  {
+    "filename": "src/rules-namespace/consistent-import.ts",
+    "message": "Use a namespace import for Zod.",
+    "code": "zod(consistent-import)",
+    "severity": "error"
+  },
+  {
+    "filename": "src/rules-namespace/consistent-import.ts",
+    "message": "Use a namespace import for Zod.",
+    "code": "zod(consistent-import)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > consistent-import-source > eslint 1`] = `
+[
+  {
+    "ruleId": "zod/consistent-import-source",
+    "line": 1,
+    "message": "\\"zod/v3\\" is not allowed. Available values are: \\"zod\\""
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > consistent-import-source > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/consistent-import-source.ts",
+    "message": "\\"zod/v3\\" is not allowed. Available values are: \\"zod\\"",
+    "code": "zod(consistent-import-source)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > consistent-object-schema-type > eslint 1`] = `
+[
+  {
+    "ruleId": "zod/consistent-object-schema-type",
+    "line": 3,
+    "message": "Inconsistent Zod object schema method 'looseObject'. Allowed: object."
+  },
+  {
+    "ruleId": "zod/consistent-object-schema-type",
+    "line": 4,
+    "message": "Inconsistent Zod object schema method 'strictObject'. Allowed: object."
+  },
+  {
+    "ruleId": "zod/consistent-object-schema-type",
+    "line": 6,
+    "message": "Inconsistent Zod object schema method 'looseObject'. Allowed: object."
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > consistent-object-schema-type > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/consistent-object-schema-type.ts",
+    "message": "Inconsistent Zod object schema method 'looseObject'. Allowed: object.",
+    "code": "zod(consistent-object-schema-type)",
+    "severity": "error"
+  },
+  {
+    "filename": "src/rules-namespace/consistent-object-schema-type.ts",
+    "message": "Inconsistent Zod object schema method 'strictObject'. Allowed: object.",
+    "code": "zod(consistent-object-schema-type)",
+    "severity": "error"
+  },
+  {
+    "filename": "src/rules-namespace/consistent-object-schema-type.ts",
+    "message": "Inconsistent Zod object schema method 'looseObject'. Allowed: object.",
+    "code": "zod(consistent-object-schema-type)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > no-any-schema > eslint 1`] = `
+[
+  {
+    "ruleId": "zod/no-any-schema",
+    "line": 3,
+    "message": "Using \`z.any()\` is not allowed. Please use a more specific schema."
+  },
+  {
+    "ruleId": "zod/no-any-schema",
+    "line": 5,
+    "message": "Using \`z.any()\` is not allowed. Please use a more specific schema."
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > no-any-schema > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/no-any-schema.ts",
+    "message": "Using \`z.any()\` is not allowed. Please use a more specific schema.",
+    "code": "zod(no-any-schema)",
+    "severity": "error"
+  },
+  {
+    "filename": "src/rules-namespace/no-any-schema.ts",
+    "message": "Using \`z.any()\` is not allowed. Please use a more specific schema.",
+    "code": "zod(no-any-schema)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > no-empty-custom-schema > eslint 1`] = `
+[
+  {
+    "ruleId": "zod/no-empty-custom-schema",
+    "line": 3,
+    "message": "You should provide a validate function within \`z.custom()\`"
+  },
+  {
+    "ruleId": "zod/require-error-message",
+    "line": 3,
+    "message": "Custom refinements must include an error message"
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > no-empty-custom-schema > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/no-empty-custom-schema.ts",
+    "message": "Custom refinements must include an error message",
+    "code": "zod(require-error-message)",
+    "severity": "error"
+  },
+  {
+    "filename": "src/rules-namespace/no-empty-custom-schema.ts",
+    "message": "You should provide a validate function within \`z.custom()\`",
+    "code": "zod(no-empty-custom-schema)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > no-number-schema-with-int > eslint 1`] = `
+[
+  {
+    "ruleId": "zod/no-number-schema-with-int",
+    "line": 3,
+    "message": "\`z.number().int()\` is considered legacy. Use \`z.int()\` instead."
+  },
+  {
+    "ruleId": "zod/no-number-schema-with-int",
+    "line": 4,
+    "message": "\`z.number().int()\` is considered legacy. Use \`z.int()\` instead."
+  },
+  {
+    "ruleId": "zod/no-number-schema-with-int",
+    "line": 5,
+    "message": "\`z.number().int()\` is considered legacy. Use \`z.int()\` instead."
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > no-number-schema-with-int > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/no-number-schema-with-int.ts",
+    "message": "\`z.number().int()\` is considered legacy. Use \`z.int()\` instead.",
+    "code": "zod(no-number-schema-with-int)",
+    "severity": "error"
+  },
+  {
+    "filename": "src/rules-namespace/no-number-schema-with-int.ts",
+    "message": "\`z.number().int()\` is considered legacy. Use \`z.int()\` instead.",
+    "code": "zod(no-number-schema-with-int)",
+    "severity": "error"
+  },
+  {
+    "filename": "src/rules-namespace/no-number-schema-with-int.ts",
+    "message": "\`z.number().int()\` is considered legacy. Use \`z.int()\` instead.",
+    "code": "zod(no-number-schema-with-int)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > no-optional-and-default-together > eslint 1`] = `
+[
+  {
+    "ruleId": "zod/no-optional-and-default-together",
+    "line": 3,
+    "message": "Using both \`.optional()\` and \`.default()\` is redundant. A schema with a default value is already optional."
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > no-optional-and-default-together > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/no-optional-and-default-together.ts",
+    "message": "Using both \`.optional()\` and \`.default()\` is redundant. A schema with a default value is already optional.",
+    "code": "zod(no-optional-and-default-together)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > no-string-schema-with-uuid > eslint 1`] = `
+[
+  {
+    "ruleId": "zod/no-string-schema-with-uuid",
+    "line": 3,
+    "message": "\`z.string().uuid()\` is redundant. Use \`z.uuid()\` instead."
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > no-string-schema-with-uuid > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/no-string-schema-with-uuid.ts",
+    "message": "\`z.string().uuid()\` is redundant. Use \`z.uuid()\` instead.",
+    "code": "zod(no-string-schema-with-uuid)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > no-throw-in-refine > eslint 1`] = `
+[
+  {
+    "ruleId": "zod/no-throw-in-refine",
+    "line": 5,
+    "message": "Do not throw errors directly inside a z.refine callback."
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > no-throw-in-refine > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/no-throw-in-refine.ts",
+    "message": "Do not throw errors directly inside a z.refine callback.",
+    "code": "zod(no-throw-in-refine)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > no-unknown-schema > eslint 1`] = `
+[
+  {
+    "ruleId": "zod/no-unknown-schema",
+    "line": 3,
+    "message": "Using \`z.unknown()\` is not allowed. Please use a more specific schema."
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > no-unknown-schema > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/no-unknown-schema.ts",
+    "message": "Using \`z.unknown()\` is not allowed. Please use a more specific schema.",
+    "code": "zod(no-unknown-schema)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > prefer-enum-over-literal-union > eslint 1`] = `
+[
+  {
+    "ruleId": "zod/prefer-enum-over-literal-union",
+    "line": 3,
+    "message": "Replace this union of string literals with \`z.enum()\`."
+  },
+  {
+    "ruleId": "zod/prefer-enum-over-literal-union",
+    "line": 7,
+    "message": "Replace this union of string literals with \`z.enum()\`."
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > prefer-enum-over-literal-union > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/prefer-enum-over-literal-union.ts",
+    "message": "Replace this union of string literals with \`z.enum()\`.",
+    "code": "zod(prefer-enum-over-literal-union)",
+    "severity": "error"
+  },
+  {
+    "filename": "src/rules-namespace/prefer-enum-over-literal-union.ts",
+    "message": "Replace this union of string literals with \`z.enum()\`.",
+    "code": "zod(prefer-enum-over-literal-union)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > prefer-meta > eslint 1`] = `
+[
+  {
+    "ruleId": "zod/prefer-meta",
+    "line": 3,
+    "message": "The \`.describe()\` method still exists for compatibility with Zod 3, but \`.meta()\` is now the recommended approach."
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > prefer-meta > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/prefer-meta.ts",
+    "message": "The \`.describe()\` method still exists for compatibility with Zod 3, but \`.meta()\` is now the recommended approach.",
+    "code": "zod(prefer-meta)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > prefer-meta-last > eslint 1`] = `
+[
+  {
+    "ruleId": "zod/prefer-meta-last",
+    "line": 3,
+    "message": "The \`.meta()\` methods should be the last one called"
+  },
+  {
+    "ruleId": "zod/prefer-meta-last",
+    "line": 14,
+    "message": "The \`.meta()\` methods should be the last one called"
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > prefer-meta-last > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/prefer-meta-last.ts",
+    "message": "The \`.meta()\` methods should be the last one called",
+    "code": "zod(prefer-meta-last)",
+    "severity": "error"
+  },
+  {
+    "filename": "src/rules-namespace/prefer-meta-last.ts",
+    "message": "The \`.meta()\` methods should be the last one called",
+    "code": "zod(prefer-meta-last)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > prefer-string-schema-with-trim > eslint 1`] = `
+[
+  {
+    "ruleId": "zod/prefer-string-schema-with-trim",
+    "line": 3,
+    "message": "\`z.string()\` schemas should use \`.trim()\`."
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > prefer-string-schema-with-trim > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/prefer-string-schema-with-trim.ts",
+    "message": "\`z.string()\` schemas should use \`.trim()\`.",
+    "code": "zod(prefer-string-schema-with-trim)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > require-brand-type-parameter > eslint 1`] = `
+[
+  {
+    "ruleId": "zod/require-brand-type-parameter",
+    "line": 3,
+    "message": "Type parameter is required when using \`.brand()\`"
+  },
+  {
+    "ruleId": "zod/require-brand-type-parameter",
+    "line": 4,
+    "message": "Type parameter is required when using \`.brand()\`"
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > require-brand-type-parameter > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/require-brand-type-parameter.ts",
+    "message": "Type parameter is required when using \`.brand()\`",
+    "code": "zod(require-brand-type-parameter)",
+    "severity": "error"
+  },
+  {
+    "filename": "src/rules-namespace/require-brand-type-parameter.ts",
+    "message": "Type parameter is required when using \`.brand()\`",
+    "code": "zod(require-brand-type-parameter)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > require-error-message > eslint 1`] = `
+[
+  {
+    "ruleId": "zod/no-any-schema",
+    "line": 3,
+    "message": "Using \`z.any()\` is not allowed. Please use a more specific schema."
+  },
+  {
+    "ruleId": "zod/no-any-schema",
+    "line": 5,
+    "message": "Using \`z.any()\` is not allowed. Please use a more specific schema."
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > require-error-message > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/no-any-schema.ts",
+    "message": "Using \`z.any()\` is not allowed. Please use a more specific schema.",
+    "code": "zod(no-any-schema)",
+    "severity": "error"
+  },
+  {
+    "filename": "src/rules-namespace/no-any-schema.ts",
+    "message": "Using \`z.any()\` is not allowed. Please use a more specific schema.",
+    "code": "zod(no-any-schema)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > require-schema-suffix > eslint 1`] = `
+[
+  {
+    "ruleId": "zod/require-schema-suffix",
+    "line": 3,
+    "message": "Use the \\"Schema\\" suffix for Zod schemas. Rename this to \\"testSchema\\""
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > require-schema-suffix > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/require-schema-suffix.ts",
+    "message": "Use the \\"Schema\\" suffix for Zod schemas. Rename this to \\"testSchema\\"",
+    "code": "zod(require-schema-suffix)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > schema-error-property-style > eslint 1`] = `
+[
+  {
+    "ruleId": "zod/schema-error-property-style",
+    "line": 4,
+    "message": "Error message must follow the pattern \\"Literal,TemplateLiteral\\" (e.g., 'error message'). Found: () => 'my error'."
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > schema-error-property-style > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/schema-error-property-style.ts",
+    "message": "Error message must follow the pattern \\"Literal,TemplateLiteral\\" (e.g., 'error message'). Found: () => 'my error'.",
+    "code": "zod(schema-error-property-style)",
+    "severity": "error"
+  }
+]
+`;

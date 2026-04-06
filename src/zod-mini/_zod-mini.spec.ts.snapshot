@@ -2,15 +2,18 @@ exports[`zod mini - each file inside rules must have an error related to that ru
 [
   {
     "ruleId": "zod/no-any-schema",
-    "line": 5
+    "line": 5,
+    "message": "Using \`z.any()\` is not allowed. Please use a more specific schema."
   },
   {
     "ruleId": "zod/prefer-meta",
-    "line": 7
+    "line": 7,
+    "message": "The \`.describe()\` method still exists for compatibility with Zod 3, but \`.meta()\` is now the recommended approach."
   },
   {
     "ruleId": "zod/require-brand-type-parameter",
-    "line": 13
+    "line": 13,
+    "message": "Type parameter is required when using \`.brand()\`"
   }
 ]
 `;
