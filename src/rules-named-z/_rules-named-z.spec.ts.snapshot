@@ -2,12 +2,12 @@ exports[`named-z - each file inside rules must have an error related to that rul
 [
   {
     "ruleId": "zod/consistent-import",
-    "line": 1,
+    "line": 2,
     "message": "Use a named import for Zod."
   },
   {
     "ruleId": "zod/consistent-import",
-    "line": 2,
+    "line": 3,
     "message": "Use a named import for Zod."
   }
 ]

@@ -1,8 +1,8 @@
 // @ts-check
 import eslint from '@eslint/js';
+import eslintPluginZod from 'eslint-plugin-zod';
 import { defineConfig } from 'eslint/config';
 import tseslint from 'typescript-eslint';
-import eslintPluginZod from 'eslint-plugin-zod';
 
 export default defineConfig(
   eslint.configs.recommended,

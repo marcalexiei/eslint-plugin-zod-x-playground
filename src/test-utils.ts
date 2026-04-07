@@ -84,8 +84,7 @@ export function runOxlint(fixturePath: string): Promise<{
 
     proc.on('close', (code) => {
       // console.info(stdout);
-      const _diagnostics = JSON.parse(stdout)
-        .diagnostics as Array<RawDiagnostic>;
+      const _diagnostics = JSON.parse(stdout).diagnostics as Array<RawDiagnostic>;
       const diagnostics = mapOxcDiagnostics(_diagnostics);
       normalizeOxlintDiagnostics(diagnostics);
 

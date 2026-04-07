@@ -1,6 +1,6 @@
-import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
 import path from 'node:path';
+import { describe, it } from 'node:test';
 
 import { ESLint } from 'eslint';
 
@@ -84,10 +84,7 @@ describe('namespace - each file inside rules must have an error related to that 
   });
 
   describe('consistent-object-schema-type', () => {
-    const filePath = path.join(
-      rulesFolderPath,
-      'consistent-object-schema-type.ts',
-    );
+    const filePath = path.join(rulesFolderPath, 'consistent-object-schema-type.ts');
 
     it('eslint', async (t) => {
       const result = await eslint.lintFiles([filePath]);
@@ -159,10 +156,7 @@ describe('namespace - each file inside rules must have an error related to that 
   });
 
   it('no-optional-and-default-together', async () => {
-    const filePath = path.join(
-      rulesFolderPath,
-      'no-optional-and-default-together.ts',
-    );
+    const filePath = path.join(rulesFolderPath, 'no-optional-and-default-together.ts');
 
     it('eslint', async (t) => {
       const result = await eslint.lintFiles([filePath]);
@@ -180,10 +174,7 @@ describe('namespace - each file inside rules must have an error related to that 
   });
 
   it('no-string-schema-with-uuid', async () => {
-    const filePath = path.join(
-      rulesFolderPath,
-      'no-string-schema-with-uuid.ts',
-    );
+    const filePath = path.join(rulesFolderPath, 'no-string-schema-with-uuid.ts');
 
     it('eslint', async (t) => {
       const result = await eslint.lintFiles([filePath]);
@@ -237,10 +228,7 @@ describe('namespace - each file inside rules must have an error related to that 
   });
 
   describe('prefer-enum-over-literal-union', () => {
-    const filePath = path.join(
-      rulesFolderPath,
-      'prefer-enum-over-literal-union.ts',
-    );
+    const filePath = path.join(rulesFolderPath, 'prefer-enum-over-literal-union.ts');
 
     it('eslint', async (t) => {
       const result = await eslint.lintFiles([filePath]);
@@ -330,10 +318,7 @@ describe('namespace - each file inside rules must have an error related to that 
   });
 
   describe('schema-error-property-style', async () => {
-    const filePath = path.join(
-      rulesFolderPath,
-      'schema-error-property-style.ts',
-    );
+    const filePath = path.join(rulesFolderPath, 'schema-error-property-style.ts');
 
     it('eslint', async (t) => {
       const result = await eslint.lintFiles([filePath]);
@@ -351,10 +336,7 @@ describe('namespace - each file inside rules must have an error related to that 
   });
 
   describe('prefer-string-schema-with-trim', async () => {
-    const filePath = path.join(
-      rulesFolderPath,
-      'prefer-string-schema-with-trim.ts',
-    );
+    const filePath = path.join(rulesFolderPath, 'prefer-string-schema-with-trim.ts');
 
     it('eslint', async (t) => {
       const result = await eslint.lintFiles([filePath]);
@@ -372,10 +354,7 @@ describe('namespace - each file inside rules must have an error related to that 
   });
 
   describe('require-brand-type-parameter', async () => {
-    const filePath = path.join(
-      rulesFolderPath,
-      'require-brand-type-parameter.ts',
-    );
+    const filePath = path.join(rulesFolderPath, 'require-brand-type-parameter.ts');
 
     it('eslint', async (t) => {
       const result = await eslint.lintFiles([filePath]);

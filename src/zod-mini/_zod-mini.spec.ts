@@ -1,6 +1,6 @@
-import { describe, it } from 'node:test';
-import path from 'node:path';
 import assert from 'node:assert/strict';
+import path from 'node:path';
+import { describe, it } from 'node:test';
 
 import { ESLint } from 'eslint';
 
@@ -12,9 +12,7 @@ describe('zod mini - each file inside rules must have an error related to that r
   const rulesFolderPath = import.meta.dirname;
 
   it('should work with eslint', async (t) => {
-    const result = await eslint.lintFiles([
-      path.join(rulesFolderPath, 'try.ts'),
-    ]);
+    const result = await eslint.lintFiles([path.join(rulesFolderPath, 'try.ts')]);
 
     const messages = mapEslintMessagesForSnapshot(result.at(0)?.messages);
     t.assert.snapshot(messages);
