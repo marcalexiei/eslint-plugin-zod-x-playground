@@ -3,30 +3,29 @@
   "version": "1.0.0",
   "private": true,
   "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
   "type": "module",
   "scripts": {
     "test": "node --test src/**/*.spec.ts src/*.spec.ts",
     "test:update": "node --test --test-update-snapshots src/**/*.spec.ts src/*.spec.ts",
-    "format": "prettier --write .",
-    "format:check": "prettier --check ."
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.32.1+sha512.a706938f0e89ac1456b6563eab4edf1d1faf3368d1191fc5c59790e96dc918e4456ab2e67d613de1043d2e8c81f87303e6b40d4ffeca9df15ef1ad567348f2be",
-  "prettier": "@marcalexiei/prettier-config",
-  "devDependencies": {
-    "@eslint/js": "10.0.1",
-    "@marcalexiei/prettier-config": "1.1.4",
-    "@types/node": "24.12.0",
-    "eslint": "10.0.3",
-    "eslint-plugin-zod": "3.5.0",
-    "oxlint": "1.55.0",
-    "prettier": "3.8.1",
-    "typescript": "5.9.3",
-    "typescript-eslint": "8.57.0"
+    "format": "oxfmt --write .",
+    "format:check": "oxfmt --check ."
   },
   "dependencies": {
     "zod": "4.3.6"
-  }
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@marcalexiei/oxfmt-config": "1.1.0",
+    "@types/node": "24.12.0",
+    "eslint": "10.2.0",
+    "eslint-plugin-zod": "3.5.1",
+    "oxfmt": "0.44.0",
+    "oxlint": "1.58.0",
+    "typescript": "6.0.2",
+    "typescript-eslint": "8.58.0"
+  },
+  "packageManager": "pnpm@10.33.0+sha512.10568bb4a6afb58c9eb3630da90cc9516417abebd3fabbe6739f0ae795728da1491e9db5a544c76ad8eb7570f5c4bb3d6c637b2cb41bfdcdb47fa823c8649319"
 }
