@@ -1,0 +1,42 @@
+exports[`zod mini - each file inside rules must have an error related to that rule > should work with eslint 1`] = `
+[
+  {
+    "ruleId": "zod/no-any-schema",
+    "line": 5,
+    "message": "Using \`z.any()\` is not allowed. Please use a more specific schema."
+  },
+  {
+    "ruleId": "zod/prefer-meta",
+    "line": 7,
+    "message": "The \`.describe()\` method still exists for compatibility with Zod 3, but \`.meta()\` is now the recommended approach."
+  },
+  {
+    "ruleId": "zod/require-brand-type-parameter",
+    "line": 13,
+    "message": "Type parameter is required when using \`.brand()\`"
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > should work with oxlint 1`] = `
+[
+  {
+    "filename": "src/zod-mini/try.ts",
+    "message": "Using \`z.any()\` is not allowed. Please use a more specific schema.",
+    "code": "zod(no-any-schema)",
+    "severity": "error"
+  },
+  {
+    "filename": "src/zod-mini/try.ts",
+    "message": "The \`.describe()\` method still exists for compatibility with Zod 3, but \`.meta()\` is now the recommended approach.",
+    "code": "zod(prefer-meta)",
+    "severity": "error"
+  },
+  {
+    "filename": "src/zod-mini/try.ts",
+    "message": "Type parameter is required when using \`.brand()\`",
+    "code": "zod(require-brand-type-parameter)",
+    "severity": "error"
+  }
+]
+`;

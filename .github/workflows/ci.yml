@@ -25,6 +25,7 @@ jobs:
       matrix:
         node:
           - 24
+          - 25
 
     steps:
       - name: Checkout
@@ -50,7 +51,7 @@ jobs:
         uses: ./.github/actions/install-dependencies
 
       - name: Run format
-        run: pnpm run format
+        run: pnpm run format:check
 
   ci-ok:
     name: CI OK
