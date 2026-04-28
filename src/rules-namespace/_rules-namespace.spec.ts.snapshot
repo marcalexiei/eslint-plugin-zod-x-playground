@@ -147,6 +147,27 @@ exports[`namespace - each file inside rules must have an error related to that r
 ]
 `;
 
+exports[`namespace - each file inside rules must have an error related to that rule > consistent-schema-name > eslint 1`] = `
+[
+  {
+    "ruleId": "zod/consistent-schema-name",
+    "line": 3,
+    "message": "Rename this Zod schema to \\"testSchema\\""
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > consistent-schema-name > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/consistent-schema-name.ts",
+    "message": "Rename this Zod schema to \\"testSchema\\"",
+    "code": "zod(consistent-schema-name)",
+    "severity": "error"
+  }
+]
+`;
+
 exports[`namespace - each file inside rules must have an error related to that rule > no-any-schema > eslint 1`] = `
 [
   {
@@ -503,27 +524,6 @@ exports[`namespace - each file inside rules must have an error related to that r
     "filename": "src/rules-namespace/no-any-schema.ts",
     "message": "Using \`z.any()\` is not allowed. Please use a more specific schema.",
     "code": "zod(no-any-schema)",
-    "severity": "error"
-  }
-]
-`;
-
-exports[`namespace - each file inside rules must have an error related to that rule > require-schema-suffix > eslint 1`] = `
-[
-  {
-    "ruleId": "zod/require-schema-suffix",
-    "line": 3,
-    "message": "Use the \\"Schema\\" suffix for Zod schemas. Rename this to \\"testSchema\\""
-  }
-]
-`;
-
-exports[`namespace - each file inside rules must have an error related to that rule > require-schema-suffix > oxlint 1`] = `
-[
-  {
-    "filename": "src/rules-namespace/require-schema-suffix.ts",
-    "message": "Use the \\"Schema\\" suffix for Zod schemas. Rename this to \\"testSchema\\"",
-    "code": "zod(require-schema-suffix)",
     "severity": "error"
   }
 ]

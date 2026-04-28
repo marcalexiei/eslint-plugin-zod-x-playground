@@ -299,8 +299,8 @@ describe('namespace - each file inside rules must have an error related to that 
     });
   });
 
-  it('require-schema-suffix', async () => {
-    const filePath = path.join(rulesFolderPath, 'require-schema-suffix.ts');
+  it('consistent-schema-name', async () => {
+    const filePath = path.join(rulesFolderPath, 'consistent-schema-name.ts');
 
     it('eslint', async (t) => {
       const result = await eslint.lintFiles([filePath]);
