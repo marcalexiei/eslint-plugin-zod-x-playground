@@ -147,22 +147,22 @@ exports[`namespace - each file inside rules must have an error related to that r
 ]
 `;
 
-exports[`namespace - each file inside rules must have an error related to that rule > consistent-schema-name > eslint 1`] = `
+exports[`namespace - each file inside rules must have an error related to that rule > consistent-schema-var-name > eslint 1`] = `
 [
   {
-    "ruleId": "zod/consistent-schema-name",
+    "ruleId": "zod/consistent-schema-var-name",
     "line": 3,
     "message": "Rename this Zod schema to \\"testSchema\\""
   }
 ]
 `;
 
-exports[`namespace - each file inside rules must have an error related to that rule > consistent-schema-name > oxlint 1`] = `
+exports[`namespace - each file inside rules must have an error related to that rule > consistent-schema-var-name > oxlint 1`] = `
 [
   {
-    "filename": "src/rules-namespace/consistent-schema-name.ts",
+    "filename": "src/rules-namespace/consistent-schema-var-name.ts",
     "message": "Rename this Zod schema to \\"testSchema\\"",
-    "code": "zod(consistent-schema-name)",
+    "code": "zod(consistent-schema-var-name)",
     "severity": "error"
   }
 ]
