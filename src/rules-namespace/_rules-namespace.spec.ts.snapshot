@@ -465,6 +465,27 @@ exports[`namespace - each file inside rules must have an error related to that r
 ]
 `;
 
+exports[`namespace - each file inside rules must have an error related to that rule > prefer-trim-before-string-length-checks > eslint 1`] = `
+[
+  {
+    "ruleId": "zod/prefer-trim-before-string-length-checks",
+    "line": 3,
+    "message": "\`.trim()\` must be called before length checks (\`.min()\`, \`.max()\`, \`.length()\`) to ensure accurate validation."
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > prefer-trim-before-string-length-checks > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/prefer-trim-before-string-length-checks.ts",
+    "message": "\`.trim()\` must be called before length checks (\`.min()\`, \`.max()\`, \`.length()\`) to ensure accurate validation.",
+    "code": "zod(prefer-trim-before-string-length-checks)",
+    "severity": "error"
+  }
+]
+`;
+
 exports[`namespace - each file inside rules must have an error related to that rule > require-brand-type-parameter > eslint 1`] = `
 [
   {

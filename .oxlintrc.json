@@ -126,11 +126,12 @@
         "zod/prefer-meta": "error",
         "zod/prefer-meta-last": "error",
         "zod/prefer-string-schema-with-trim": "error",
+        "zod/prefer-trim-before-string-length-checks": "error",
         "zod/require-brand-type-parameter": "error",
         "zod/require-error-message": "error",
         "zod/consistent-schema-var-name": "error",
-        "zod/no-unknown-schema": ["error"],
-        "zod/schema-error-property-style": ["error"]
+        "zod/no-unknown-schema": "error",
+        "zod/schema-error-property-style": "error"
       },
       "jsPlugins": ["eslint-plugin-zod"]
     },
