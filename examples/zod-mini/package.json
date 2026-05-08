@@ -8,7 +8,7 @@
     "test:update": "node --test --test-update-snapshots src/**/*.spec.ts"
   },
   "dependencies": {
-    "zod": "4.4.2"
+    "zod": "4.4.3"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",

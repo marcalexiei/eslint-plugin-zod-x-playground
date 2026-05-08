@@ -18,8 +18,8 @@ importers:
   examples/zod:
     dependencies:
       zod:
-        specifier: 4.4.2
-        version: 4.4.2
+        specifier: 4.4.3
+        version: 4.4.3
     devDependencies:
       '@eslint/js':
         specifier: 10.0.1
@@ -32,7 +32,7 @@ importers:
         version: 10.3.0
       eslint-plugin-zod:
         specifier: 4.0.1
-        version: 4.0.1(eslint@10.3.0)(oxlint@1.62.0)(typescript@6.0.3)(zod@4.4.2)
+        version: 4.0.1(eslint@10.3.0)(oxlint@1.62.0)(typescript@6.0.3)(zod@4.4.3)
       oxlint:
         specifier: 1.62.0
         version: 1.62.0
@@ -46,8 +46,8 @@ importers:
   examples/zod-mini:
     dependencies:
       zod:
-        specifier: 4.4.2
-        version: 4.4.2
+        specifier: 4.4.3
+        version: 4.4.3
     devDependencies:
       '@eslint/js':
         specifier: 10.0.1
@@ -60,7 +60,7 @@ importers:
         version: 10.3.0
       eslint-plugin-zod-mini:
         specifier: 1.0.1
-        version: 1.0.1(eslint@10.3.0)(oxlint@1.62.0)(typescript@6.0.3)(zod@4.4.2)
+        version: 1.0.1(eslint@10.3.0)(oxlint@1.62.0)(typescript@6.0.3)(zod@4.4.3)
       oxlint:
         specifier: 1.62.0
         version: 1.62.0
@@ -768,8 +768,8 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
 
-  zod@4.4.2:
-    resolution: {integrity: sha512-IynmDyxsEsb9RKzO3J9+4SxXnl2FTFSzNBaKKaMV6tsSk0rw9gYw9gs+JFCq/qk2LCZ78KDwyj+Z289TijSkUw==}
+  zod@4.4.3:
+    resolution: {integrity: sha512-ytENFjIJFl2UwYglde2jchW2Hwm4GJFLDiSXWdTrJQBIN9Fcyp7n4DhxJEiWNAJMV1/BqWfW/kkg71UDcHJyTQ==}
 
 snapshots:
 
@@ -1083,7 +1083,7 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
-  eslint-plugin-zod-mini@1.0.1(eslint@10.3.0)(oxlint@1.62.0)(typescript@6.0.3)(zod@4.4.2):
+  eslint-plugin-zod-mini@1.0.1(eslint@10.3.0)(oxlint@1.62.0)(typescript@6.0.3)(zod@4.4.3):
     dependencies:
       '@eslint-zod/utils': 1.0.1(eslint@10.3.0)(typescript@6.0.3)
       '@typescript-eslint/utils': 8.59.1(eslint@10.3.0)(typescript@6.0.3)
@@ -1091,12 +1091,12 @@ snapshots:
     optionalDependencies:
       eslint: 10.3.0
       oxlint: 1.62.0
-      zod: 4.4.2
+      zod: 4.4.3
     transitivePeerDependencies:
       - supports-color
       - typescript
 
-  eslint-plugin-zod@4.0.1(eslint@10.3.0)(oxlint@1.62.0)(typescript@6.0.3)(zod@4.4.2):
+  eslint-plugin-zod@4.0.1(eslint@10.3.0)(oxlint@1.62.0)(typescript@6.0.3)(zod@4.4.3):
     dependencies:
       '@eslint-zod/utils': 1.0.1(eslint@10.3.0)(typescript@6.0.3)
       '@typescript-eslint/utils': 8.59.1(eslint@10.3.0)(typescript@6.0.3)
@@ -1104,7 +1104,7 @@ snapshots:
     optionalDependencies:
       eslint: 10.3.0
       oxlint: 1.62.0
-      zod: 4.4.2
+      zod: 4.4.3
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -1367,4 +1367,4 @@ snapshots:
 
   yocto-queue@0.1.0: {}
 
-  zod@4.4.2: {}
+  zod@4.4.3: {}
