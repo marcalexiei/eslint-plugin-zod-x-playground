@@ -1,9 +1,9 @@
-import eslintPluginZod from 'eslint-plugin-zod';
+import eslintPluginZodMini from 'eslint-plugin-zod-mini';
 import { defineConfig } from 'oxlint';
 
 export default defineConfig({
   plugins: ['typescript'],
-  jsPlugins: ['eslint-plugin-zod'],
+  jsPlugins: ['eslint-plugin-zod-mini'],
   categories: {
     correctness: 'off',
   },
@@ -116,63 +116,9 @@ export default defineConfig({
     {
       files: ['src/**'],
       rules: {
-        ...eslintPluginZod.configs.recommended.rules,
-        'zod/no-unknown-schema': 'error',
-        'zod/schema-error-property-style': 'error',
+        ...eslintPluginZodMini.configs.recommended.rules,
       },
-      jsPlugins: ['eslint-plugin-zod'],
-    },
-    {
-      files: ['src/rules-namespace/consistent-import-source.ts'],
-      rules: {
-        'zod/consistent-import-source': ['error'],
-      },
-      jsPlugins: ['eslint-plugin-zod'],
-    },
-    {
-      files: ['src/rules-namespace/consistent-object-schema-type.ts'],
-      rules: {
-        'zod/consistent-object-schema-type': ['error'],
-      },
-      jsPlugins: ['eslint-plugin-zod'],
-    },
-    {
-      files: ['src/rules-namespace/array-style-method.ts'],
-      rules: {
-        'zod/array-style': [
-          'error',
-          {
-            style: 'method',
-          },
-        ],
-      },
-      jsPlugins: ['eslint-plugin-zod'],
-    },
-    {
-      files: ['src/rules-named/*.ts'],
-      rules: {
-        'zod/consistent-import': ['off'],
-      },
-      jsPlugins: ['eslint-plugin-zod'],
-    },
-    {
-      files: ['src/rules-named-z/*.ts'],
-      rules: {
-        'zod/consistent-import': [
-          'error',
-          {
-            syntax: 'named',
-          },
-        ],
-      },
-      jsPlugins: ['eslint-plugin-zod'],
-    },
-    {
-      files: ['src/zod-mini/**'],
-      rules: {
-        ...eslintPluginZod.configs.recommendedMini.rules,
-      },
-      jsPlugins: ['eslint-plugin-zod'],
+      jsPlugins: ['eslint-plugin-zod-mini'],
     },
   ],
 });

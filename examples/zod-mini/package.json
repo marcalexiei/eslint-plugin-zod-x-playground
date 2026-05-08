@@ -1,0 +1,22 @@
+{
+  "name": "@eslint-plugin-zod-playground/zod-mini",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test src/**/*.spec.ts",
+    "test:update": "node --test --test-update-snapshots src/**/*.spec.ts"
+  },
+  "dependencies": {
+    "zod": "4.4.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "25.6.0",
+    "eslint": "10.3.0",
+    "eslint-plugin-zod-mini": "1.0.1",
+    "oxlint": "1.62.0",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.59.1"
+  }
+}

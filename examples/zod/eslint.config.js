@@ -56,9 +56,4 @@ export default defineConfig(
       'zod/consistent-import': ['error', { syntax: 'named' }],
     },
   },
-
-  {
-    ...eslintPluginZod.configs.recommendedMini,
-    files: ['src/zod-mini/**'],
-  },
 );
