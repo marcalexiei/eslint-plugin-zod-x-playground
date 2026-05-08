@@ -1,3 +1,6 @@
 # eslint-plugin-zod-playground
 
-Testing [eslint-plugin-zod](https://github.com/marcalexiei/eslint-plugin-zod).
+Repository for "e2e" testing of
+
+- [eslint-plugin-zod](https://npmx.dev/package/eslint-plugin-zod).
+- [eslint-plugin-zod-mini](https://npmx.dev/package/eslint-plugin-zod-mini).
