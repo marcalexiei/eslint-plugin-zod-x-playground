@@ -21,4 +21,48 @@ export default defineConfig(
     ...eslintPluginZodMini.configs.recommended,
     files: ['src/**'],
   },
+  {
+    // `z.custom()` without arguments also lacks an error message, so disable
+    // `require-error-message` here to isolate the `no-empty-custom-schema` error.
+    files: ['src/rules-namespace/no-empty-custom-schema.ts'],
+    rules: {
+      'zod-mini/require-error-message': ['off'],
+    },
+  },
+  {
+    files: ['src/rules-namespace/consistent-import-source.ts'],
+    rules: {
+      'zod-mini/consistent-import-source': ['error'],
+    },
+  },
+  {
+    files: ['src/rules-namespace/consistent-object-schema-type.ts'],
+    rules: {
+      'zod-mini/consistent-object-schema-type': ['error'],
+    },
+  },
+  {
+    files: ['src/rules-namespace/consistent-schema-output-type-style.ts'],
+    rules: {
+      'zod-mini/consistent-schema-output-type-style': ['error'],
+    },
+  },
+  {
+    files: ['src/rules-namespace/no-transform-in-record-key.ts'],
+    rules: {
+      'zod-mini/no-transform-in-record-key': ['error'],
+    },
+  },
+  {
+    files: ['src/rules-namespace/no-unknown-schema.ts'],
+    rules: {
+      'zod-mini/no-unknown-schema': ['error'],
+    },
+  },
+  {
+    files: ['src/rules-namespace/schema-error-property-style.ts'],
+    rules: {
+      'zod-mini/schema-error-property-style': ['error'],
+    },
+  },
 );

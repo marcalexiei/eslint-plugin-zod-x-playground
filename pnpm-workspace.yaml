@@ -1,2 +1,28 @@
 packages:
   - 'examples/*'
+
+catalog:
+  '@eslint/js': 10.0.1
+  '@marcalexiei/oxfmt-config': 1.1.0
+  '@types/node': 25.9.1
+  eslint: 10.4.1
+  eslint-plugin-zod: 4.6.0
+  eslint-plugin-zod-mini: 1.3.0
+  oxfmt: 0.52.0
+  oxlint: 1.67.0
+  typescript: 6.0.3
+  typescript-eslint: 8.60.0
+  zod: 4.4.3
+
+minimumReleaseAge: 1440 # 1 day
+minimumReleaseAgeExclude:
+  - '@eslint-zod/utils'
+  - eslint-plugin-zod
+  - eslint-plugin-zod-mini
+
+# No dependency in this workspace needs a build/postinstall script;
+# an empty allowlist blocks them all instead of prompting.
+onlyBuiltDependencies: []
+
+# Fail a script run if node_modules is out of sync with the lockfile.
+verifyDepsBeforeRun: error

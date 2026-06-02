@@ -120,5 +120,56 @@ export default defineConfig({
       },
       jsPlugins: ['eslint-plugin-zod-mini'],
     },
+    {
+      // `z.custom()` without arguments also lacks an error message, so disable
+      // `require-error-message` here to isolate the `no-empty-custom-schema` error.
+      files: ['src/rules-namespace/no-empty-custom-schema.ts'],
+      rules: {
+        'zod-mini/require-error-message': ['off'],
+      },
+      jsPlugins: ['eslint-plugin-zod-mini'],
+    },
+    {
+      files: ['src/rules-namespace/consistent-import-source.ts'],
+      rules: {
+        'zod-mini/consistent-import-source': ['error'],
+      },
+      jsPlugins: ['eslint-plugin-zod-mini'],
+    },
+    {
+      files: ['src/rules-namespace/consistent-object-schema-type.ts'],
+      rules: {
+        'zod-mini/consistent-object-schema-type': ['error'],
+      },
+      jsPlugins: ['eslint-plugin-zod-mini'],
+    },
+    {
+      files: ['src/rules-namespace/consistent-schema-output-type-style.ts'],
+      rules: {
+        'zod-mini/consistent-schema-output-type-style': ['error'],
+      },
+      jsPlugins: ['eslint-plugin-zod-mini'],
+    },
+    {
+      files: ['src/rules-namespace/no-transform-in-record-key.ts'],
+      rules: {
+        'zod-mini/no-transform-in-record-key': ['error'],
+      },
+      jsPlugins: ['eslint-plugin-zod-mini'],
+    },
+    {
+      files: ['src/rules-namespace/no-unknown-schema.ts'],
+      rules: {
+        'zod-mini/no-unknown-schema': ['error'],
+      },
+      jsPlugins: ['eslint-plugin-zod-mini'],
+    },
+    {
+      files: ['src/rules-namespace/schema-error-property-style.ts'],
+      rules: {
+        'zod-mini/schema-error-property-style': ['error'],
+      },
+      jsPlugins: ['eslint-plugin-zod-mini'],
+    },
   ],
 });

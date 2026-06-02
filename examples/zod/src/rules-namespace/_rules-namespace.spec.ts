@@ -119,6 +119,24 @@ describe('namespace - each file inside rules must have an error related to that 
     });
   });
 
+  describe('no-duplicate-schema-methods', () => {
+    const filePath = path.join(rulesFolderPath, 'no-duplicate-schema-methods.ts');
+
+    it('eslint', async (t) => {
+      const result = await eslint.lintFiles([filePath]);
+
+      const messages = mapEslintMessagesForSnapshot(result.at(0)?.messages);
+      t.assert.snapshot(messages);
+    });
+
+    it('oxlint', async (t) => {
+      const { code, diagnostics } = await runOxlint(filePath);
+
+      assert.equal(code, 1);
+      t.assert.snapshot(diagnostics);
+    });
+  });
+
   it('no-empty-custom-schema', () => {
     const filePath = path.join(rulesFolderPath, 'no-empty-custom-schema.ts');
 

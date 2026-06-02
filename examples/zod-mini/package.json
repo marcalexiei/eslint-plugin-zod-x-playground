@@ -8,15 +8,15 @@
     "test:update": "node --test --test-update-snapshots src/**/*.spec.ts"
   },
   "dependencies": {
-    "zod": "4.4.2"
+    "zod": "catalog:"
   },
   "devDependencies": {
-    "@eslint/js": "10.0.1",
-    "@types/node": "25.6.0",
-    "eslint": "10.3.0",
-    "eslint-plugin-zod-mini": "1.0.1",
-    "oxlint": "1.62.0",
-    "typescript": "6.0.3",
-    "typescript-eslint": "8.59.1"
+    "@eslint/js": "catalog:",
+    "@types/node": "catalog:",
+    "eslint": "catalog:",
+    "eslint-plugin-zod-mini": "catalog:",
+    "oxlint": "catalog:",
+    "typescript": "catalog:",
+    "typescript-eslint": "catalog:"
   }
 }

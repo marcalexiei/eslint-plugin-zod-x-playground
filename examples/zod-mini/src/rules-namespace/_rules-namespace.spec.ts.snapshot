@@ -1,0 +1,346 @@
+exports[`zod mini - each file inside rules must have an error related to that rule > consistent-import > eslint 1`] = `
+[
+  {
+    "ruleId": "zod-mini/consistent-import",
+    "line": 1,
+    "message": "Use a namespace import for Zod Mini."
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > consistent-import > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/consistent-import.ts",
+    "message": "Use a namespace import for Zod Mini.",
+    "code": "zod-mini(consistent-import)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > consistent-import-source > eslint 1`] = `
+[
+  {
+    "ruleId": "zod-mini/consistent-import-source",
+    "line": 1,
+    "message": "\\"zod/v4-mini\\" is not allowed. Available values are: \\"zod/mini\\""
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > consistent-import-source > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/consistent-import-source.ts",
+    "message": "\\"zod/v4-mini\\" is not allowed. Available values are: \\"zod/mini\\"",
+    "code": "zod-mini(consistent-import-source)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > consistent-object-schema-type > eslint 1`] = `
+[
+  {
+    "ruleId": "zod-mini/consistent-object-schema-type",
+    "line": 3,
+    "message": "Inconsistent Zod Mini object schema method 'looseObject'. Allowed: object."
+  },
+  {
+    "ruleId": "zod-mini/consistent-object-schema-type",
+    "line": 4,
+    "message": "Inconsistent Zod Mini object schema method 'strictObject'. Allowed: object."
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > consistent-object-schema-type > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/consistent-object-schema-type.ts",
+    "message": "Inconsistent Zod Mini object schema method 'looseObject'. Allowed: object.",
+    "code": "zod-mini(consistent-object-schema-type)",
+    "severity": "error"
+  },
+  {
+    "filename": "src/rules-namespace/consistent-object-schema-type.ts",
+    "message": "Inconsistent Zod Mini object schema method 'strictObject'. Allowed: object.",
+    "code": "zod-mini(consistent-object-schema-type)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > consistent-schema-output-type-style > eslint 1`] = `
+[
+  {
+    "ruleId": "zod-mini/consistent-schema-output-type-style",
+    "line": 5,
+    "message": "Use output instead of infer."
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > consistent-schema-output-type-style > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/consistent-schema-output-type-style.ts",
+    "message": "Use output instead of infer.",
+    "code": "zod-mini(consistent-schema-output-type-style)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > consistent-schema-var-name > eslint 1`] = `
+[
+  {
+    "ruleId": "zod-mini/consistent-schema-var-name",
+    "line": 3,
+    "message": "Rename this Zod Mini schema to \\"testSchema\\""
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > consistent-schema-var-name > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/consistent-schema-var-name.ts",
+    "message": "Rename this Zod Mini schema to \\"testSchema\\"",
+    "code": "zod-mini(consistent-schema-var-name)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > no-any-schema > eslint 1`] = `
+[
+  {
+    "ruleId": "zod-mini/no-any-schema",
+    "line": 3,
+    "message": "Using \`z.any()\` is not allowed. Please use a more specific schema."
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > no-any-schema > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/no-any-schema.ts",
+    "message": "Using \`z.any()\` is not allowed. Please use a more specific schema.",
+    "code": "zod-mini(no-any-schema)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > no-duplicate-schema-methods > eslint 1`] = `
+[
+  {
+    "ruleId": "zod-mini/no-duplicate-schema-methods",
+    "line": 3,
+    "message": "Method \`.brand()\` is called more than once in this schema chain."
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > no-duplicate-schema-methods > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/no-duplicate-schema-methods.ts",
+    "message": "Method \`.brand()\` is called more than once in this schema chain.",
+    "code": "zod-mini(no-duplicate-schema-methods)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > no-empty-custom-schema > eslint 1`] = `
+[
+  {
+    "ruleId": "zod-mini/no-empty-custom-schema",
+    "line": 3,
+    "message": "You should provide a validate function within \`z.custom()\`"
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > no-empty-custom-schema > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/no-empty-custom-schema.ts",
+    "message": "You should provide a validate function within \`z.custom()\`",
+    "code": "zod-mini(no-empty-custom-schema)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > no-throw-in-refine > eslint 1`] = `
+[
+  {
+    "ruleId": "zod-mini/no-throw-in-refine",
+    "line": 5,
+    "message": "Do not throw errors directly inside a z.refine callback."
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > no-throw-in-refine > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/no-throw-in-refine.ts",
+    "message": "Do not throw errors directly inside a z.refine callback.",
+    "code": "zod-mini(no-throw-in-refine)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > no-transform-in-record-key > eslint 1`] = `
+[
+  {
+    "ruleId": "zod-mini/no-transform-in-record-key",
+    "line": 3,
+    "message": "Transforms in z.record() key schemas cause silent key mutation and potential data loss. Use validators like z.minLength() instead of mutating checks like z.trim() or z.toLowerCase()."
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > no-transform-in-record-key > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/no-transform-in-record-key.ts",
+    "message": "Transforms in z.record() key schemas cause silent key mutation and potential data loss. Use validators like z.minLength() instead of mutating checks like z.trim() or z.toLowerCase().",
+    "code": "zod-mini(no-transform-in-record-key)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > no-unknown-schema > eslint 1`] = `
+[
+  {
+    "ruleId": "zod-mini/no-unknown-schema",
+    "line": 3,
+    "message": "Using \`z.unknown()\` is not allowed. Please use a more specific schema."
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > no-unknown-schema > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/no-unknown-schema.ts",
+    "message": "Using \`z.unknown()\` is not allowed. Please use a more specific schema.",
+    "code": "zod-mini(no-unknown-schema)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > prefer-enum-over-literal-union > eslint 1`] = `
+[
+  {
+    "ruleId": "zod-mini/prefer-enum-over-literal-union",
+    "line": 3,
+    "message": "Replace this union of string literals with \`z.enum()\`."
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > prefer-enum-over-literal-union > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/prefer-enum-over-literal-union.ts",
+    "message": "Replace this union of string literals with \`z.enum()\`.",
+    "code": "zod-mini(prefer-enum-over-literal-union)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > prefer-meta > eslint 1`] = `
+[
+  {
+    "ruleId": "zod-mini/prefer-meta",
+    "line": 3,
+    "message": "The \`z.describe()\` function still exists for compatibility with Zod 3, but \`z.meta()\` is now the recommended approach."
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > prefer-meta > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/prefer-meta.ts",
+    "message": "The \`z.describe()\` function still exists for compatibility with Zod 3, but \`z.meta()\` is now the recommended approach.",
+    "code": "zod-mini(prefer-meta)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > require-brand-type-parameter > eslint 1`] = `
+[
+  {
+    "ruleId": "zod-mini/require-brand-type-parameter",
+    "line": 3,
+    "message": "Type parameter is required when using \`.brand()\`"
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > require-brand-type-parameter > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/require-brand-type-parameter.ts",
+    "message": "Type parameter is required when using \`.brand()\`",
+    "code": "zod-mini(require-brand-type-parameter)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > require-error-message > eslint 1`] = `
+[
+  {
+    "ruleId": "zod-mini/require-error-message",
+    "line": 3,
+    "message": "Custom refinements must include an error message"
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > require-error-message > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/require-error-message.ts",
+    "message": "Custom refinements must include an error message",
+    "code": "zod-mini(require-error-message)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > schema-error-property-style > eslint 1`] = `
+[
+  {
+    "ruleId": "zod-mini/schema-error-property-style",
+    "line": 3,
+    "message": "Error message must follow the pattern \\"Literal,TemplateLiteral\\" (e.g., 'error message'). Found: () => 'my error'."
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > schema-error-property-style > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/schema-error-property-style.ts",
+    "message": "Error message must follow the pattern \\"Literal,TemplateLiteral\\" (e.g., 'error message'). Found: () => 'my error'.",
+    "code": "zod-mini(schema-error-property-style)",
+    "severity": "error"
+  }
+]
+`;
