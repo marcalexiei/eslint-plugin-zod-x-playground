@@ -34,7 +34,7 @@ jobs:
           persist-credentials: false
 
       - name: Setup Node and pnpm
-        uses: marcalexiei/github-actions/.github/actions/setup-node-and-pnpm@eb08a573367bb5b1c0c92de915df174b4aa69d62 # v1.4.0
+        uses: marcalexiei/github-actions/setup-node-and-pnpm@35654007fc916287603cd114516a3d1295f62689 # v2.0.0
         with:
           node-version: ${{ matrix.node }}
 
@@ -52,7 +52,7 @@ jobs:
           persist-credentials: false
 
       - name: Setup Node and pnpm
-        uses: marcalexiei/github-actions/.github/actions/setup-node-and-pnpm@eb08a573367bb5b1c0c92de915df174b4aa69d62 # v1.4.0
+        uses: marcalexiei/github-actions/setup-node-and-pnpm@35654007fc916287603cd114516a3d1295f62689 # v2.0.0
 
       - name: Run format
         run: pnpm run format:check
