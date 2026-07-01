@@ -22,8 +22,8 @@ catalogs:
       specifier: 4.6.0
       version: 4.6.0
     eslint-plugin-zod-mini:
-      specifier: 1.3.0
-      version: 1.3.0
+      specifier: 1.4.0
+      version: 1.4.0
     oxfmt:
       specifier: 0.52.0
       version: 0.52.0
@@ -99,7 +99,7 @@ importers:
         version: 10.4.1
       eslint-plugin-zod-mini:
         specifier: 'catalog:'
-        version: 1.3.0(eslint@10.4.1)(oxlint@1.67.0)(typescript@6.0.3)(zod@4.4.3)
+        version: 1.4.0(eslint@10.4.1)(oxlint@1.67.0)(typescript@6.0.3)(zod@4.4.3)
       oxlint:
         specifier: 'catalog:'
         version: 1.67.0
@@ -124,6 +124,10 @@ packages:
 
   '@eslint-zod/utils@2.2.0':
     resolution: {integrity: sha512-U++LaftAa71jBuCqvaY3FE6PRS/cjb9Meg+/Q3TmwPL6RdQhqopjHNKI3RoHCGs1COyn6GLg0HR6mEnfbwN5Mg==}
+    engines: {node: ^20 || ^22 || >=24}
+
+  '@eslint-zod/utils@2.3.0':
+    resolution: {integrity: sha512-6XEQLA5lDOOLnX05bgzDT3DyxlCGgLDFX3q0wYSSUSyVJj5WD+8wdlIAFY8kjatSDHWJQ+qFI/BdiDh9o50nBQ==}
     engines: {node: ^20 || ^22 || >=24}
 
   '@eslint/config-array@0.23.5':
@@ -536,8 +540,8 @@ packages:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
 
-  eslint-plugin-zod-mini@1.3.0:
-    resolution: {integrity: sha512-i2LaM61NlCQ/adFAIo6aPPCZA4eBDQcbVrVc9madIDjkQvAAdC5giIvf0PrKe8/cT+CDhKnynWtz25d8p8ANRw==}
+  eslint-plugin-zod-mini@1.4.0:
+    resolution: {integrity: sha512-SSlniIGZAVq5bdUYNfrrPnyBaWTc/bVV5+dsWswUqS+AjJs+gqo93Bxf9KCfrgSj8q6ZR0vdU0j7R5PppCm5AA==}
     engines: {node: ^20 || ^22 || >=24}
     peerDependencies:
       eslint: ^9 || ^10
@@ -831,6 +835,15 @@ snapshots:
   '@eslint-community/regexpp@4.12.2': {}
 
   '@eslint-zod/utils@2.2.0(eslint@10.4.1)(typescript@6.0.3)':
+    dependencies:
+      '@typescript-eslint/utils': 8.60.0(eslint@10.4.1)(typescript@6.0.3)
+      esquery: 1.7.0
+    transitivePeerDependencies:
+      - eslint
+      - supports-color
+      - typescript
+
+  '@eslint-zod/utils@2.3.0(eslint@10.4.1)(typescript@6.0.3)':
     dependencies:
       '@typescript-eslint/utils': 8.60.0(eslint@10.4.1)(typescript@6.0.3)
       esquery: 1.7.0
@@ -1134,9 +1147,9 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
-  eslint-plugin-zod-mini@1.3.0(eslint@10.4.1)(oxlint@1.67.0)(typescript@6.0.3)(zod@4.4.3):
+  eslint-plugin-zod-mini@1.4.0(eslint@10.4.1)(oxlint@1.67.0)(typescript@6.0.3)(zod@4.4.3):
     dependencies:
-      '@eslint-zod/utils': 2.2.0(eslint@10.4.1)(typescript@6.0.3)
+      '@eslint-zod/utils': 2.3.0(eslint@10.4.1)(typescript@6.0.3)
       '@typescript-eslint/utils': 8.60.0(eslint@10.4.1)(typescript@6.0.3)
     optionalDependencies:
       eslint: 10.4.1
