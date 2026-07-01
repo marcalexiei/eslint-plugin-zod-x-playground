@@ -10,8 +10,8 @@ catalogs:
       specifier: 10.0.1
       version: 10.0.1
     '@marcalexiei/oxfmt-config':
-      specifier: 1.1.0
-      version: 1.1.0
+      specifier: 1.2.0
+      version: 1.2.0
     '@types/node':
       specifier: 25.9.1
       version: 25.9.1
@@ -46,7 +46,7 @@ importers:
     devDependencies:
       '@marcalexiei/oxfmt-config':
         specifier: 'catalog:'
-        version: 1.1.0(oxfmt@0.52.0)
+        version: 1.2.0(oxfmt@0.52.0)
       '@types/node':
         specifier: 'catalog:'
         version: 25.9.1
@@ -175,10 +175,10 @@ packages:
     resolution: {integrity: sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==}
     engines: {node: '>=18.18'}
 
-  '@marcalexiei/oxfmt-config@1.1.0':
-    resolution: {integrity: sha512-YPizV5uOLQ72K20exXHQ/C7n/RaccHeMjcoYymD2f1NjTlwEX9d9/cO79/6qDpPs/NqOFvr7RvKh1MDePkqCfA==}
+  '@marcalexiei/oxfmt-config@1.2.0':
+    resolution: {integrity: sha512-iSJ+d6L38D+LUneRD4RWO7ykrpqxouITPE3jxRVc6onygYnISpQZmeKa7VXwC/OxYiMiWy/gDx3z2fxZjBIr8g==}
     peerDependencies:
-      oxfmt: '>=0.41.0 <1'
+      oxfmt: '>=0.56.0 <1'
 
   '@oxfmt/binding-android-arm-eabi@0.52.0':
     resolution: {integrity: sha512-17EMSJnQ9g+upVHrAUYDMfH5lvRKQ9Nvg8WtEoH72oDr1VpWz+7/o3tD97U1EToen2YAQ/68JmtDYkQUi20dfQ==}
@@ -882,7 +882,7 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.3': {}
 
-  '@marcalexiei/oxfmt-config@1.1.0(oxfmt@0.52.0)':
+  '@marcalexiei/oxfmt-config@1.2.0(oxfmt@0.52.0)':
     dependencies:
       oxfmt: 0.52.0
 
