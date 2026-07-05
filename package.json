@@ -11,12 +11,13 @@
     "test": "pnpm -r test",
     "test:update": "pnpm -r test:update",
     "format": "oxfmt --write .",
-    "format:check": "oxfmt --check ."
+    "format:check": "oxfmt --check .",
+    "check-all": "pnpm run format && pnpm run test"
   },
   "devDependencies": {
     "@marcalexiei/oxfmt-config": "catalog:",
     "@types/node": "catalog:",
     "oxfmt": "catalog:"
   },
-  "packageManager": "pnpm@11.5.0+sha512.dbfcc4f81cf48597afd4bc391ffdf12c11f1a9fb83a395bfa6b0a2d9cc2fd8ffebafdb1ccbd529632153f793904c2615b7f09fe1a345473fd1c35845172a8eb1"
+  "packageManager": "pnpm@11.10.0+sha512.0b7f8b98060031904c017e3a41eb187a16d40eeb829b95c4f8cb03681761fc4ab53dd219115b9b447f4dce1a05a214764461e7d3703392a9f32f9511ce8c86c8"
 }
