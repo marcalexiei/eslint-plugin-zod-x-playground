@@ -14,25 +14,28 @@ updates:
     schedule:
       interval: 'monthly'
     open-pull-requests-limit: 10
-    groups:
-      dev-format:
-        applies-to: 'version-updates'
-        dependency-type: 'development'
-        patterns:
-          - '@marcalexiei/prettier-config'
-          - 'prettier'
-
-      dev:
-        applies-to: 'version-updates'
-        dependency-type: 'development'
-        patterns:
-          - '@eslint/js'
-          - '@types/*'
-          - 'eslint'
-          - 'oxlint'
-          - 'oxlint-tsgolint'
-          - 'eslint-plugin-zod'
-          - 'typescript'
-          - 'typescript-eslint'
     cooldown:
       default-days: 7
+    groups:
+      # The subjects of this playground — fast-tracked (excluded from
+      # minimumReleaseAge in pnpm-workspace.yaml) so releases get tested early.
+      zod:
+        applies-to: 'version-updates'
+        patterns:
+          - 'zod'
+          - 'eslint-plugin-zod'
+          - 'eslint-plugin-zod-mini'
+
+      eslint:
+        applies-to: 'version-updates'
+        patterns:
+          - '@eslint/js'
+          - 'eslint'
+          - 'typescript-eslint'
+          - 'oxlint'
+
+      format:
+        applies-to: 'version-updates'
+        patterns:
+          - '@marcalexiei/oxfmt-config'
+          - 'oxfmt'
