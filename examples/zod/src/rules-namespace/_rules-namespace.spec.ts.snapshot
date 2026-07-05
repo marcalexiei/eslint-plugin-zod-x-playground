@@ -364,11 +364,6 @@ exports[`namespace - each file inside rules must have an error related to that r
 exports[`namespace - each file inside rules must have an error related to that rule > no-string-schema-with-uuid > eslint 1`] = `
 [
   {
-    "ruleId": "zod/no-string-schema-with-uuid",
-    "line": 3,
-    "message": "\`z.string().uuid()\` is redundant. Use \`z.uuid()\` instead."
-  },
-  {
     "ruleId": "zod/prefer-top-level-string-formats",
     "line": 3,
     "message": "Use \`z.uuid()\` instead of \`z.string().uuid()\`."
@@ -382,12 +377,6 @@ exports[`namespace - each file inside rules must have an error related to that r
     "filename": "src/rules-namespace/no-string-schema-with-uuid.ts",
     "message": "Use \`z.uuid()\` instead of \`z.string().uuid()\`.",
     "code": "zod(prefer-top-level-string-formats)",
-    "severity": "error"
-  },
-  {
-    "filename": "src/rules-namespace/no-string-schema-with-uuid.ts",
-    "message": "\`z.string().uuid()\` is redundant. Use \`z.uuid()\` instead.",
-    "code": "zod(no-string-schema-with-uuid)",
     "severity": "error"
   }
 ]
