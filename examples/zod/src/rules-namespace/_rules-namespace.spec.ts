@@ -119,6 +119,24 @@ describe('namespace - each file inside rules must have an error related to that 
     });
   });
 
+  describe('no-conflicting-checks', () => {
+    const filePath = path.join(rulesFolderPath, 'no-conflicting-checks.ts');
+
+    it('eslint', async (t) => {
+      const result = await eslint.lintFiles([filePath]);
+
+      const messages = mapEslintMessagesForSnapshot(result.at(0)?.messages);
+      t.assert.snapshot(messages);
+    });
+
+    it('oxlint', async (t) => {
+      const { code, diagnostics } = await runOxlint(filePath);
+
+      assert.equal(code, 1);
+      t.assert.snapshot(diagnostics);
+    });
+  });
+
   describe('no-duplicate-schema-methods', () => {
     const filePath = path.join(rulesFolderPath, 'no-duplicate-schema-methods.ts');
 
@@ -245,6 +263,24 @@ describe('namespace - each file inside rules must have an error related to that 
     });
   });
 
+  describe('no-unnecessary-readonly', async () => {
+    const filePath = path.join(rulesFolderPath, 'no-unnecessary-readonly.ts');
+
+    it('eslint', async (t) => {
+      const result = await eslint.lintFiles([filePath]);
+
+      const messages = mapEslintMessagesForSnapshot(result.at(0)?.messages);
+      t.assert.snapshot(messages);
+    });
+
+    it('oxlint', async (t) => {
+      const { code, diagnostics } = await runOxlint(filePath);
+
+      assert.equal(code, 1);
+      t.assert.snapshot(diagnostics);
+    });
+  });
+
   describe('prefer-enum-over-literal-union', () => {
     const filePath = path.join(rulesFolderPath, 'prefer-enum-over-literal-union.ts');
 
@@ -283,6 +319,24 @@ describe('namespace - each file inside rules must have an error related to that 
 
   describe('prefer-meta', async () => {
     const filePath = path.join(rulesFolderPath, 'prefer-meta.ts');
+
+    it('eslint', async (t) => {
+      const result = await eslint.lintFiles([filePath]);
+
+      const messages = mapEslintMessagesForSnapshot(result.at(0)?.messages);
+      t.assert.snapshot(messages);
+    });
+
+    it('oxlint', async (t) => {
+      const { code, diagnostics } = await runOxlint(filePath);
+
+      assert.equal(code, 1);
+      t.assert.snapshot(diagnostics);
+    });
+  });
+
+  describe('prefer-nullish', async () => {
+    const filePath = path.join(rulesFolderPath, 'prefer-nullish.ts');
 
     it('eslint', async (t) => {
       const result = await eslint.lintFiles([filePath]);
@@ -373,6 +427,24 @@ describe('namespace - each file inside rules must have an error related to that 
 
   describe('prefer-trim-before-string-length-checks', async () => {
     const filePath = path.join(rulesFolderPath, 'prefer-trim-before-string-length-checks.ts');
+
+    it('eslint', async (t) => {
+      const result = await eslint.lintFiles([filePath]);
+
+      const messages = mapEslintMessagesForSnapshot(result.at(0)?.messages);
+      t.assert.snapshot(messages);
+    });
+
+    it('oxlint', async (t) => {
+      const { code, diagnostics } = await runOxlint(filePath);
+
+      assert.equal(code, 1);
+      t.assert.snapshot(diagnostics);
+    });
+  });
+
+  describe('prefer-tuple-over-array-length', async () => {
+    const filePath = path.join(rulesFolderPath, 'prefer-tuple-over-array-length.ts');
 
     it('eslint', async (t) => {
       const result = await eslint.lintFiles([filePath]);

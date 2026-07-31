@@ -149,6 +149,27 @@ export default defineConfig({
       jsPlugins: ['eslint-plugin-zod'],
     },
     {
+      files: ['src/rules-namespace/no-conflicting-checks.ts'],
+      rules: {
+        'zod/no-conflicting-checks': ['error'],
+      },
+      jsPlugins: ['eslint-plugin-zod'],
+    },
+    {
+      files: ['src/rules-namespace/no-unnecessary-readonly.ts'],
+      rules: {
+        'zod/no-unnecessary-readonly': ['error'],
+      },
+      jsPlugins: ['eslint-plugin-zod'],
+    },
+    {
+      files: ['src/rules-namespace/prefer-tuple-over-array-length.ts'],
+      rules: {
+        'zod/prefer-tuple-over-array-length': ['error'],
+      },
+      jsPlugins: ['eslint-plugin-zod'],
+    },
+    {
       files: ['src/rules-named/*.ts'],
       rules: {
         'zod/consistent-import': ['off'],

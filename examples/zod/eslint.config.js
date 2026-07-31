@@ -45,6 +45,24 @@ export default defineConfig(
     },
   },
   {
+    files: ['src/rules-namespace/no-conflicting-checks.ts'],
+    rules: {
+      'zod/no-conflicting-checks': ['error'],
+    },
+  },
+  {
+    files: ['src/rules-namespace/no-unnecessary-readonly.ts'],
+    rules: {
+      'zod/no-unnecessary-readonly': ['error'],
+    },
+  },
+  {
+    files: ['src/rules-namespace/prefer-tuple-over-array-length.ts'],
+    rules: {
+      'zod/prefer-tuple-over-array-length': ['error'],
+    },
+  },
+  {
     files: ['src/rules-named/*.ts'],
     rules: {
       'zod/consistent-import': ['off'],
