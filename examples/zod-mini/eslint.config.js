@@ -48,6 +48,12 @@ export default defineConfig(
     },
   },
   {
+    files: ['src/rules-namespace/no-conflicting-checks.ts'],
+    rules: {
+      'zod-mini/no-conflicting-checks': ['error'],
+    },
+  },
+  {
     files: ['src/rules-namespace/no-transform-in-record-key.ts'],
     rules: {
       'zod-mini/no-transform-in-record-key': ['error'],
@@ -57,6 +63,18 @@ export default defineConfig(
     files: ['src/rules-namespace/no-unknown-schema.ts'],
     rules: {
       'zod-mini/no-unknown-schema': ['error'],
+    },
+  },
+  {
+    files: ['src/rules-namespace/no-unnecessary-readonly.ts'],
+    rules: {
+      'zod-mini/no-unnecessary-readonly': ['error'],
+    },
+  },
+  {
+    files: ['src/rules-namespace/prefer-tuple-over-array-length.ts'],
+    rules: {
+      'zod-mini/prefer-tuple-over-array-length': ['error'],
     },
   },
   {

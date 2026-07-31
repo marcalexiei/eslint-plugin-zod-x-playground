@@ -135,6 +135,27 @@ exports[`zod mini - each file inside rules must have an error related to that ru
 ]
 `;
 
+exports[`zod mini - each file inside rules must have an error related to that rule > no-conflicting-checks > eslint 1`] = `
+[
+  {
+    "ruleId": "zod-mini/no-conflicting-checks",
+    "line": 3,
+    "message": "This schema can never match: \`minLength(5)\` conflicts with \`maxLength(2)\`."
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > no-conflicting-checks > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/no-conflicting-checks.ts",
+    "message": "This schema can never match: \`minLength(5)\` conflicts with \`maxLength(2)\`.",
+    "code": "zod-mini(no-conflicting-checks)",
+    "severity": "error"
+  }
+]
+`;
+
 exports[`zod mini - each file inside rules must have an error related to that rule > no-duplicate-schema-methods > eslint 1`] = `
 [
   {
@@ -240,6 +261,27 @@ exports[`zod mini - each file inside rules must have an error related to that ru
 ]
 `;
 
+exports[`zod mini - each file inside rules must have an error related to that rule > no-unnecessary-readonly > eslint 1`] = `
+[
+  {
+    "ruleId": "zod-mini/no-unnecessary-readonly",
+    "line": 3,
+    "message": "\`readonly\` has no effect on an already-immutable schema; remove it."
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > no-unnecessary-readonly > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/no-unnecessary-readonly.ts",
+    "message": "\`readonly\` has no effect on an already-immutable schema; remove it.",
+    "code": "zod-mini(no-unnecessary-readonly)",
+    "severity": "error"
+  }
+]
+`;
+
 exports[`zod mini - each file inside rules must have an error related to that rule > prefer-enum-over-literal-union > eslint 1`] = `
 [
   {
@@ -277,6 +319,48 @@ exports[`zod mini - each file inside rules must have an error related to that ru
     "filename": "src/rules-namespace/prefer-meta.ts",
     "message": "The \`z.describe()\` function still exists for compatibility with Zod 3, but \`z.meta()\` is now the recommended approach.",
     "code": "zod-mini(prefer-meta)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > prefer-nullish > eslint 1`] = `
+[
+  {
+    "ruleId": "zod-mini/prefer-nullish",
+    "line": 3,
+    "message": "Combining \`z.optional()\` and \`z.nullable()\` is redundant. Use \`z.nullish()\` instead."
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > prefer-nullish > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/prefer-nullish.ts",
+    "message": "Combining \`z.optional()\` and \`z.nullable()\` is redundant. Use \`z.nullish()\` instead.",
+    "code": "zod-mini(prefer-nullish)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > prefer-tuple-over-array-length > eslint 1`] = `
+[
+  {
+    "ruleId": "zod-mini/prefer-tuple-over-array-length",
+    "line": 3,
+    "message": "Prefer \`z.tuple()\` over a length-constrained \`z.array()\` so the length is preserved in the inferred type."
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > prefer-tuple-over-array-length > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/prefer-tuple-over-array-length.ts",
+    "message": "Prefer \`z.tuple()\` over a length-constrained \`z.array()\` so the length is preserved in the inferred type.",
+    "code": "zod-mini(prefer-tuple-over-array-length)",
     "severity": "error"
   }
 ]

@@ -200,6 +200,27 @@ exports[`namespace - each file inside rules must have an error related to that r
 ]
 `;
 
+exports[`namespace - each file inside rules must have an error related to that rule > no-conflicting-checks > eslint 1`] = `
+[
+  {
+    "ruleId": "zod/no-conflicting-checks",
+    "line": 3,
+    "message": "This schema can never match: \`min(5)\` conflicts with \`max(2)\`."
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > no-conflicting-checks > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/no-conflicting-checks.ts",
+    "message": "This schema can never match: \`min(5)\` conflicts with \`max(2)\`.",
+    "code": "zod(no-conflicting-checks)",
+    "severity": "error"
+  }
+]
+`;
+
 exports[`namespace - each file inside rules must have an error related to that rule > no-duplicate-schema-methods > eslint 1`] = `
 [
   {
@@ -240,12 +261,6 @@ exports[`namespace - each file inside rules must have an error related to that r
   },
   {
     "filename": "src/rules-namespace/no-duplicate-schema-methods.ts",
-    "message": "\`z.string()\` schemas should use \`.trim()\`.",
-    "code": "zod(prefer-string-schema-with-trim)",
-    "severity": "error"
-  },
-  {
-    "filename": "src/rules-namespace/no-duplicate-schema-methods.ts",
     "message": "Method \`.min()\` is called more than once in this schema chain.",
     "code": "zod(no-duplicate-schema-methods)",
     "severity": "error"
@@ -260,6 +275,12 @@ exports[`namespace - each file inside rules must have an error related to that r
     "filename": "src/rules-namespace/no-duplicate-schema-methods.ts",
     "message": "Method \`.optional()\` is called more than once in this schema chain.",
     "code": "zod(no-duplicate-schema-methods)",
+    "severity": "error"
+  },
+  {
+    "filename": "src/rules-namespace/no-duplicate-schema-methods.ts",
+    "message": "\`z.string()\` schemas should use \`.trim()\`.",
+    "code": "zod(prefer-string-schema-with-trim)",
     "severity": "error"
   }
 ]
@@ -424,6 +445,27 @@ exports[`namespace - each file inside rules must have an error related to that r
 ]
 `;
 
+exports[`namespace - each file inside rules must have an error related to that rule > no-unnecessary-readonly > eslint 1`] = `
+[
+  {
+    "ruleId": "zod/no-unnecessary-readonly",
+    "line": 3,
+    "message": "\`readonly\` has no effect on an already-immutable schema; remove it."
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > no-unnecessary-readonly > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/no-unnecessary-readonly.ts",
+    "message": "\`readonly\` has no effect on an already-immutable schema; remove it.",
+    "code": "zod(no-unnecessary-readonly)",
+    "severity": "error"
+  }
+]
+`;
+
 exports[`namespace - each file inside rules must have an error related to that rule > prefer-enum-over-literal-union > eslint 1`] = `
 [
   {
@@ -509,6 +551,27 @@ exports[`namespace - each file inside rules must have an error related to that r
 ]
 `;
 
+exports[`namespace - each file inside rules must have an error related to that rule > prefer-nullish > eslint 1`] = `
+[
+  {
+    "ruleId": "zod/prefer-nullish",
+    "line": 3,
+    "message": "Combining \`.optional()\` and \`.nullable()\` is redundant. Use \`.nullish()\` instead."
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > prefer-nullish > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/prefer-nullish.ts",
+    "message": "Combining \`.optional()\` and \`.nullable()\` is redundant. Use \`.nullish()\` instead.",
+    "code": "zod(prefer-nullish)",
+    "severity": "error"
+  }
+]
+`;
+
 exports[`namespace - each file inside rules must have an error related to that rule > prefer-string-schema-with-trim > eslint 1`] = `
 [
   {
@@ -546,6 +609,27 @@ exports[`namespace - each file inside rules must have an error related to that r
     "filename": "src/rules-namespace/prefer-trim-before-string-length-checks.ts",
     "message": "\`.trim()\` must be called before length checks (\`.min()\`, \`.max()\`, \`.length()\`) to ensure accurate validation.",
     "code": "zod(prefer-trim-before-string-length-checks)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > prefer-tuple-over-array-length > eslint 1`] = `
+[
+  {
+    "ruleId": "zod/prefer-tuple-over-array-length",
+    "line": 3,
+    "message": "Prefer \`z.tuple()\` over a length-constrained \`z.array()\` so the length is preserved in the inferred type."
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > prefer-tuple-over-array-length > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/prefer-tuple-over-array-length.ts",
+    "message": "Prefer \`z.tuple()\` over a length-constrained \`z.array()\` so the length is preserved in the inferred type.",
+    "code": "zod(prefer-tuple-over-array-length)",
     "severity": "error"
   }
 ]
