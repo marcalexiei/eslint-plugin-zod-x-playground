@@ -170,6 +170,13 @@ export default defineConfig({
       jsPlugins: ['eslint-plugin-zod'],
     },
     {
+      files: ['src/rules-namespace/prefer-string-length-over-min-max.ts'],
+      rules: {
+        'zod/prefer-string-length-over-min-max': ['error'],
+      },
+      jsPlugins: ['eslint-plugin-zod'],
+    },
+    {
       files: ['src/rules-named/*.ts'],
       rules: {
         'zod/consistent-import': ['off'],

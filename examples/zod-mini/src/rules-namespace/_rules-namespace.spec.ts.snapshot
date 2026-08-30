@@ -198,6 +198,48 @@ exports[`zod mini - each file inside rules must have an error related to that ru
 ]
 `;
 
+exports[`zod mini - each file inside rules must have an error related to that rule > no-native-enum > eslint 1`] = `
+[
+  {
+    "ruleId": "zod-mini/no-native-enum",
+    "line": 8,
+    "message": "\`z.nativeEnum()\` is deprecated in Zod 4. Use \`z.enum()\` instead."
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > no-native-enum > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/no-native-enum.ts",
+    "message": "\`z.nativeEnum()\` is deprecated in Zod 4. Use \`z.enum()\` instead.",
+    "code": "zod-mini(no-native-enum)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > no-promise-schema > eslint 1`] = `
+[
+  {
+    "ruleId": "zod-mini/no-promise-schema",
+    "line": 3,
+    "message": "\`z.promise()\` is deprecated in Zod 4. Await the value before parsing it instead."
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > no-promise-schema > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/no-promise-schema.ts",
+    "message": "\`z.promise()\` is deprecated in Zod 4. Await the value before parsing it instead.",
+    "code": "zod-mini(no-promise-schema)",
+    "severity": "error"
+  }
+]
+`;
+
 exports[`zod mini - each file inside rules must have an error related to that rule > no-throw-in-refine > eslint 1`] = `
 [
   {
@@ -340,6 +382,27 @@ exports[`zod mini - each file inside rules must have an error related to that ru
     "filename": "src/rules-namespace/prefer-nullish.ts",
     "message": "Combining \`z.optional()\` and \`z.nullable()\` is redundant. Use \`z.nullish()\` instead.",
     "code": "zod-mini(prefer-nullish)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > prefer-string-length-over-min-max > eslint 1`] = `
+[
+  {
+    "ruleId": "zod-mini/prefer-string-length-over-min-max",
+    "line": 3,
+    "message": "Use \`z.length(n)\` instead of \`z.minLength(n)\` and \`z.maxLength(n)\` with the same value."
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > prefer-string-length-over-min-max > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/prefer-string-length-over-min-max.ts",
+    "message": "Use \`z.length(n)\` instead of \`z.minLength(n)\` and \`z.maxLength(n)\` with the same value.",
+    "code": "zod-mini(prefer-string-length-over-min-max)",
     "severity": "error"
   }
 ]

@@ -443,6 +443,24 @@ describe('namespace - each file inside rules must have an error related to that 
     });
   });
 
+  describe('prefer-string-length-over-min-max', async () => {
+    const filePath = path.join(rulesFolderPath, 'prefer-string-length-over-min-max.ts');
+
+    it('eslint', async (t) => {
+      const result = await eslint.lintFiles([filePath]);
+
+      const messages = mapEslintMessagesForSnapshot(result.at(0)?.messages);
+      t.assert.snapshot(messages);
+    });
+
+    it('oxlint', async (t) => {
+      const { code, diagnostics } = await runOxlint(filePath);
+
+      assert.equal(code, 1);
+      t.assert.snapshot(diagnostics);
+    });
+  });
+
   describe('prefer-tuple-over-array-length', async () => {
     const filePath = path.join(rulesFolderPath, 'prefer-tuple-over-array-length.ts');
 

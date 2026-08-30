@@ -78,6 +78,12 @@ export default defineConfig(
     },
   },
   {
+    files: ['src/rules-namespace/prefer-string-length-over-min-max.ts'],
+    rules: {
+      'zod-mini/prefer-string-length-over-min-max': ['error'],
+    },
+  },
+  {
     files: ['src/rules-namespace/schema-error-property-style.ts'],
     rules: {
       'zod-mini/schema-error-property-style': ['error'],

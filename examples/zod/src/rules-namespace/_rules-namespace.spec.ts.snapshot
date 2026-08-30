@@ -305,14 +305,14 @@ exports[`namespace - each file inside rules must have an error related to that r
 [
   {
     "filename": "src/rules-namespace/no-empty-custom-schema.ts",
-    "message": "You should provide a validate function within \`z.custom()\`",
-    "code": "zod(no-empty-custom-schema)",
+    "message": "Custom refinements must include an error message",
+    "code": "zod(require-error-message)",
     "severity": "error"
   },
   {
     "filename": "src/rules-namespace/no-empty-custom-schema.ts",
-    "message": "Custom refinements must include an error message",
-    "code": "zod(require-error-message)",
+    "message": "You should provide a validate function within \`z.custom()\`",
+    "code": "zod(no-empty-custom-schema)",
     "severity": "error"
   }
 ]
@@ -567,6 +567,27 @@ exports[`namespace - each file inside rules must have an error related to that r
     "filename": "src/rules-namespace/prefer-nullish.ts",
     "message": "Combining \`.optional()\` and \`.nullable()\` is redundant. Use \`.nullish()\` instead.",
     "code": "zod(prefer-nullish)",
+    "severity": "error"
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > prefer-string-length-over-min-max > eslint 1`] = `
+[
+  {
+    "ruleId": "zod/prefer-string-length-over-min-max",
+    "line": 3,
+    "message": "Use \`.length(n)\` instead of \`.min(n)\` and \`.max(n)\` with the same value."
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > prefer-string-length-over-min-max > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/prefer-string-length-over-min-max.ts",
+    "message": "Use \`.length(n)\` instead of \`.min(n)\` and \`.max(n)\` with the same value.",
+    "code": "zod(prefer-string-length-over-min-max)",
     "severity": "error"
   }
 ]

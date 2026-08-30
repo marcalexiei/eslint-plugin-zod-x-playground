@@ -186,6 +186,13 @@ export default defineConfig({
       jsPlugins: ['eslint-plugin-zod-mini'],
     },
     {
+      files: ['src/rules-namespace/prefer-string-length-over-min-max.ts'],
+      rules: {
+        'zod-mini/prefer-string-length-over-min-max': ['error'],
+      },
+      jsPlugins: ['eslint-plugin-zod-mini'],
+    },
+    {
       files: ['src/rules-namespace/schema-error-property-style.ts'],
       rules: {
         'zod-mini/schema-error-property-style': ['error'],
