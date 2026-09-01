@@ -177,6 +177,13 @@ export default defineConfig({
       jsPlugins: ['eslint-plugin-zod'],
     },
     {
+      files: ['src/rules-namespace/prefer-map-set-size-over-min-max.ts'],
+      rules: {
+        'zod/prefer-map-set-size-over-min-max': ['error'],
+      },
+      jsPlugins: ['eslint-plugin-zod'],
+    },
+    {
       files: ['src/rules-named/*.ts'],
       rules: {
         'zod/consistent-import': ['off'],

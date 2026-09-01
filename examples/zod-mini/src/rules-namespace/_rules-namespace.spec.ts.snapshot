@@ -345,6 +345,27 @@ exports[`zod mini - each file inside rules must have an error related to that ru
 ]
 `;
 
+exports[`zod mini - each file inside rules must have an error related to that rule > prefer-map-set-size-over-min-max > eslint 1`] = `
+[
+  {
+    "ruleId": "zod-mini/prefer-map-set-size-over-min-max",
+    "line": 3,
+    "message": "Use \`z.size(n)\` instead of \`z.minSize(n)\` and \`z.maxSize(n)\` with the same value."
+  }
+]
+`;
+
+exports[`zod mini - each file inside rules must have an error related to that rule > prefer-map-set-size-over-min-max > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/prefer-map-set-size-over-min-max.ts",
+    "message": "Use \`z.size(n)\` instead of \`z.minSize(n)\` and \`z.maxSize(n)\` with the same value.",
+    "code": "zod-mini(prefer-map-set-size-over-min-max)",
+    "severity": "error"
+  }
+]
+`;
+
 exports[`zod mini - each file inside rules must have an error related to that rule > prefer-meta > eslint 1`] = `
 [
   {

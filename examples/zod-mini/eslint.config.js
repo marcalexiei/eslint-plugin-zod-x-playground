@@ -84,6 +84,12 @@ export default defineConfig(
     },
   },
   {
+    files: ['src/rules-namespace/prefer-map-set-size-over-min-max.ts'],
+    rules: {
+      'zod-mini/prefer-map-set-size-over-min-max': ['error'],
+    },
+  },
+  {
     files: ['src/rules-namespace/schema-error-property-style.ts'],
     rules: {
       'zod-mini/schema-error-property-style': ['error'],

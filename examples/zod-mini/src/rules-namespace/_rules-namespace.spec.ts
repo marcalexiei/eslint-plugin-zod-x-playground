@@ -25,6 +25,7 @@ const RULES = [
   'no-unknown-schema',
   'no-unnecessary-readonly',
   'prefer-enum-over-literal-union',
+  'prefer-map-set-size-over-min-max',
   'prefer-meta',
   'prefer-nullish',
   'prefer-string-length-over-min-max',

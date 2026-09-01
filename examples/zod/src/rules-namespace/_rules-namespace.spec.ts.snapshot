@@ -498,6 +498,27 @@ exports[`namespace - each file inside rules must have an error related to that r
 ]
 `;
 
+exports[`namespace - each file inside rules must have an error related to that rule > prefer-map-set-size-over-min-max > eslint 1`] = `
+[
+  {
+    "ruleId": "zod/prefer-map-set-size-over-min-max",
+    "line": 3,
+    "message": "Use \`.size(n)\` instead of \`.min(n)\` and \`.max(n)\` with the same value."
+  }
+]
+`;
+
+exports[`namespace - each file inside rules must have an error related to that rule > prefer-map-set-size-over-min-max > oxlint 1`] = `
+[
+  {
+    "filename": "src/rules-namespace/prefer-map-set-size-over-min-max.ts",
+    "message": "Use \`.size(n)\` instead of \`.min(n)\` and \`.max(n)\` with the same value.",
+    "code": "zod(prefer-map-set-size-over-min-max)",
+    "severity": "error"
+  }
+]
+`;
+
 exports[`namespace - each file inside rules must have an error related to that rule > prefer-meta > eslint 1`] = `
 [
   {
